@@ -52,7 +52,7 @@ Check module swoole
 php -m
 ```
 
-# Run hyperf-api
+# Run hyperf-backend
 
 ```
 php ./bin/hyperf.php migrate    
