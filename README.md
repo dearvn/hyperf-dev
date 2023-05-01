@@ -52,7 +52,7 @@ Check module swoole
 php -m
 ```
 
-# Run hyperf
+# Run hyperf-api
 
 ```
 php ./bin/hyperf.php migrate    
@@ -60,4 +60,11 @@ php ./bin/hyperf.php migrate
 php ./bin/hyperf.php init:data_seeder
 
 php ./bin/hyperf.php init
+
+php ./bin/hyperf.php start
 ```
+
+# Run hyperf-frontend
+
+npm run dev
+
