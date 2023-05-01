@@ -1,0 +1,238 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Hyperf Watch Hot Reload Scripts
+ * From: https://github.com/ha-ni-cc/hyperf-watch
+ * Author: hanicc@qq.com
+ * Usage:
+ * Open the terminal console in the project root directory and enter：php watch
+ * Open the terminal console in the project root directory, enter, enter：php watch
+ * If you want to clean the /runtime/container cache, enter: php watch -c
+ * If you want to remove/run/container cache, enter：php watch -c
+ */
+
+# Path where the PHP Bin File PHP program is located (automatically obtained by default)
+const PHP_BIN_FILE = 'which php';
+# Watch DIR monitoring directory (the root directory of the default monitoring script)
+const WATCH_DIR = __DIR__ . '/';
+# Watch EXT monitoring extension name (separated by multiple English commas)
+const WATCH_EXT = 'php,env';
+# Exclude DIR exclude the directory (the directory of the listening, the form of the array)
+const EXCLUDE_DIR = ['vendor', 'runtime', 'public'];
+# Entry Point File entry file
+const ENTRY_POINT_FILE = __DIR__ . '/bin/hyperf.php';
+# Start Command start command
+const START_COMMAND = [ENTRY_POINT_FILE, 'start'];
+# PID FILE PATH PID file path
+const PID_FILE_PATH = __DIR__ . '/runtime/hyperf.pid';
+# Scan Interval scanning interval (milliseconds, default 2000)
+const SCAN_INTERVAL = 2000;
+# Console color console color
+const CONSOLE_COLOR_DEFAULT = "\033[0m";
+const CONSOLE_COLOR_RED = "\033[0;31m";
+const CONSOLE_COLOR_GREEN = "\033[0;32m";
+const CONSOLE_COLOR_YELLOW = "\033[0;33m";
+const CONSOLE_COLOR_BLUE = "\033[0;34m";
+
+if (!function_exists('exec')) {
+    echo '[X] Please cancel the disable EXEC method in the php.ini configuration' . PHP_EOL;
+    exit(1);
+}
+
+define('PHP', PHP_BIN_FILE == 'which php' ? exec('which php') : PHP_BIN_FILE);
+
+if (!file_exists(PHP) || !is_executable(PHP)) {
+    echo '[x] PHP bin (" ' . PHP . ' ") If the path is not found or cannot be executed, please confirm that the path is correct?' . PHP_EOL;
+    exit(1);
+}
+
+if (!file_exists(ENTRY_POINT_FILE)) {
+    echo '[x] Entry file ("' . ENTRY_POINT_FILE . '") Can\'t find it, please confirm the existence of the file?' . PHP_EOL;
+    exit(1);
+}
+
+# Load ENV
+$content = @file_get_contents('.env');
+$values = array_filter(preg_split("/(\r\n|\n|\r)/", $content));
+foreach ($values as $val) {
+    if (substr($val, 0, 1) === '#') {
+        continue;
+    }
+    list($name, $value) = explode('=', $val);
+    $_ENV[$name] = $value;
+}
+
+use Swoole\Process;
+use Swoole\Timer;
+use Swoole\Event;
+
+swoole_async_set(['enable_coroutine' => false, 'log_level' => SWOOLE_LOG_INFO]);
+$hashes = [];
+$serve = null;
+
+echo CONSOLE_COLOR_YELLOW . "🚀 Start @ " . date('Y-m-d H:i:s') . PHP_EOL;
+start();
+state();
+Timer::tick(SCAN_INTERVAL, 'watch');
+
+function killOldProcess()
+{
+    // The existence of PID is closed, and the existence process is closed
+    if (file_exists(PID_FILE_PATH) && $pid = @file_get_contents(PID_FILE_PATH)) {
+        if (!@posix_kill($pid)) forceKill();
+    } else forceKill();
+}
+
+function forceKill($match = '')
+{
+    if (!$match) {
+        $match = @$_ENV['APP_NAME'] . '.Master';
+    }
+    // Adaptation to macos
+    if (PHP_OS == 'Darwin') $match = ENTRY_POINT_FILE;
+    $command = "ps -ef | grep '$match' | grep -v grep | awk '{print $2}' | xargs kill -9 2>&1";
+    // Can't find PID, force the kill process
+    exec($command);
+}
+
+function start()
+{
+    // Kill the old process
+    killOldProcess();
+    global $serve;
+    $serve = new Process('serve', true);
+    $serve->start();
+    if (false === $serve->pid) {
+        echo swoole_strerror(swoole_errno()) . PHP_EOL;
+        exit(1);
+    }
+    addEvent($serve);
+}
+
+function addEvent($serve)
+{
+    Event::add($serve->pipe, function () use (&$serve) {
+        $message = @$serve->read();
+        if (!empty($message)) {
+            $debug = strpos($message, '[DEBUG]') !== false;
+            $info = strpos($message, '[INFO]') !== false;
+            $warn = strpos($message, '[WARNING]') !== false;
+            $error = strpos($message, '[ERROR]') !== false;
+            if ($debug) {
+                echo CONSOLE_COLOR_BLUE . $message;
+            } elseif ($info) {
+                echo CONSOLE_COLOR_GREEN . $message;
+            } elseif ($warn) {
+                echo CONSOLE_COLOR_YELLOW . $message;
+            } elseif ($error) {
+                echo CONSOLE_COLOR_RED . $message;
+            } else echo CONSOLE_COLOR_DEFAULT . $message;
+            echo CONSOLE_COLOR_DEFAULT;
+        }
+    });
+}
+
+function watch()
+{
+    global $hashes;
+    foreach ($hashes as $pathName => $currentHash) {
+        if (!file_exists($pathName)) {
+            unset($hashes[$pathName]);
+            continue;
+        }
+        $newHash = fileHash($pathName);
+        if ($newHash != $currentHash) {
+            change();
+            state();
+            break;
+        }
+    }
+}
+
+function state()
+{
+    global $hashes;
+    $files = phpFiles(WATCH_DIR);
+    $hashes = array_combine($files, array_map('fileHash', $files));
+    $count = count($hashes);
+    echo CONSOLE_COLOR_YELLOW . "📡 Watching $count files..." . PHP_EOL;
+}
+
+function change()
+{
+    global $serve;
+    echo CONSOLE_COLOR_YELLOW . "🔄 Restart @ " . date('Y-m-d H:i:s') . PHP_EOL;
+    Process::kill($serve->pid);
+    start();
+}
+
+function serve(Process $serve)
+{
+    $opt = getopt('c');
+    # if (isset($opt['c'])) echo exec(PHP . ' ' . ENTRY_POINT_FILE . ' di:init-proxy') . '..' . PHP_EOL;
+    if (isset($opt['c'])) delDir('./runtime/container');
+    $serve->exec(PHP, START_COMMAND);
+}
+
+function fileHash(string $pathname): string
+{
+    $contents = file_get_contents($pathname);
+    if (false === $contents) {
+        return 'deleted';
+    }
+    return md5($contents);
+}
+
+function phpFiles(string $dirname): array
+{
+    $directory = new RecursiveDirectoryIterator($dirname);
+    $filter = new Filter($directory);
+    $iterator = new RecursiveIteratorIterator($filter);
+    return array_map(function ($fileInfo) {
+        return $fileInfo->getPathname();
+    }, iterator_to_array($iterator));
+}
+
+function delDir($path)
+{
+    if (is_dir($path)) {
+        //Scan all the directory and files in a directory and return the array
+        $dirs = scandir($path);
+        foreach ($dirs as $dir) {
+            //Exclude the current directory in the directory (.) And the previous level directory (..)
+            if ($dir != '.' && $dir != '..') {
+                //If it is a directory, the recursive sub -directory is handed, continue to operate
+                $sonDir = $path . '/' . $dir;
+                if (is_dir($sonDir)) {
+                    //Recursive deletion
+                    delDir($sonDir);
+                    //Delete the empty directory after the subdirectory and file in the directory are deleted
+                    @rmdir($sonDir);
+                } else {
+                    //If it is a file, delete it directly
+                    @unlink($sonDir);
+                }
+            }
+        }
+        @rmdir($path);
+    }
+}
+
+class Filter extends RecursiveFilterIterator
+{
+    public function accept(): bool
+    {
+        if ($this->current()->isDir()) {
+            if (preg_match('/^\./', $this->current()->getFilename())) {
+                return false;
+            }
+            return !in_array($this->current()->getFilename(), EXCLUDE_DIR);
+        }
+        $list = array_map(function (string $item): string {
+            return "\.$item";
+        }, explode(',', WATCH_EXT));
+        $list = implode('|', $list);
+        return preg_match("/($list)$/", $this->current()->getFilename());
+    }
+}

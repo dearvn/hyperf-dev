@@ -1,0 +1,638 @@
+{
+    "adtags": [
+        {
+            "subTags": [
+                {
+                    "Value": 10101,
+                    "Label": "Leisure time"
+                },
+                {
+                    "Value": 10102,
+                    "Label": "Parkour Racing"
+                },
+                {
+                    "Value": 10103,
+                    "Label": "Gem Elimination"
+                },
+                {
+                    "Value": 10104,
+                    "Label": "Online Game"
+                },
+                {
+                    "Value": 10105,
+                    "Label": "Action Shooting"
+                },
+                {
+                    "Value": 10106,
+                    "Label": "Poker Chess"
+                },
+                {
+                    "Value": 10107,
+                    "Label": "Children's Puzzle"
+                },
+                {
+                    "Value": 10108,
+                    "Label": "Tower Defense"
+                },
+                {
+                    "Value": 10109,
+                    "Label": "Sports Fight"
+                },
+                {
+                    "Value": 10110,
+                    "Label": "role -playing"
+                },
+                {
+                    "Value": 10111,
+                    "Label": "Business Strategy"
+                }
+            ],
+            "Value": 10001,
+            "Label": "Game"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 10201,
+                    "Label": "Home Instyle and Building Materials"
+                },
+                {
+                    "Value": 10202,
+                    "Label": "Home Textile"
+                },
+                {
+                    "Value": 10203,
+                    "Label": "Household Electric"
+                },
+                {
+                    "Value": 10204,
+                    "Label": "Home Appliance Repair"
+                },
+                {
+                    "Value": 10205,
+                    "Label": "Daily Department Store"
+                }
+            ],
+            "Value": 10002,
+            "Label": "Home Instant Store"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 10301,
+                    "Label": "Stock Fund"
+                },
+                {
+                    "Value": 10302,
+                    "Label": "Insurance"
+                },
+                {
+                    "Value": 10303,
+                    "Label": "Lottery"
+                },
+                {
+                    "Value": 10304,
+                    "Label": "Futures Foreign Exchange"
+                },
+                {
+                    "Value": 10305,
+                    "Label": "Bank Finance"
+                },
+                {
+                    "Value": 10306,
+                    "Label": "Internet Finance"
+                },
+                {
+                    "Value": 10307,
+                    "Label": "precious metal"
+                }
+            ],
+            "Value": 10003,
+            "Label": "Financial Management"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 10401,
+                    "Label": "Preschool Education"
+                },
+                {
+                    "Value": 10402,
+                    "Label": "Education of Primary and Secondary Schools"
+                },
+                {
+                    "Value": 10403,
+                    "Label": "University Education"
+                },
+                {
+                    "Value": 10404,
+                    "Label": "Vocational Education"
+                },
+                {
+                    "Value": 10405,
+                    "Label": "Education Education"
+                },
+                {
+                    "Value": 10406,
+                    "Label": "Language Training"
+                },
+                {
+                    "Value": 10407,
+                    "Label": "IT Training"
+                },
+                {
+                    "Value": 10408,
+                    "Label": "Civil Service Test"
+                },
+                {
+                    "Value": 10409,
+                    "Label": "Study abroad"
+                },
+                {
+                    "Value": 10410,
+                    "Label": "Skill Training"
+                },
+                {
+                    "Value": 10411,
+                    "Label": "Expand Training"
+                }
+            ],
+            "Value": 10004,
+            "Label": "Education and Training"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 10501,
+                    "Label": "Local Tour"
+                },
+                {
+                    "Value": 10502,
+                    "Label": "Domestic Tour"
+                },
+                {
+                    "Value": 10503,
+                    "Label": "Hong Kong, Macao and Taiwan Tour"
+                },
+                {
+                    "Value": 10504,
+                    "Label": "Overseas Tour"
+                },
+                {
+                    "Value": 10505,
+                    "Label": "Outdoor Adventure"
+                },
+                {
+                    "Value": 10506,
+                    "Label": "Theme Travel"
+                },
+                {
+                    "Value": 10507,
+                    "Label": "Hotel accommodation"
+                },
+                {
+                    "Value": 10508,
+                    "Label": "Traffic Ticketing"
+                }
+            ],
+            "Value": 10005,
+            "tag": "new",
+            "Label": "Travel"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 10601,
+                    "Label": "Fashion Women's Clothing"
+                },
+                {
+                    "Value": 10602,
+                    "Label": "Boutique men's clothing"
+                },
+                {
+                    "Value": 10603,
+                    "Label": "Women's Shoes"
+                },
+                {
+                    "Value": 10604,
+                    "Label": "Men's Shoes"
+                },
+                {
+                    "Value": 10605,
+                    "Label": "Underwear"
+                },
+                {
+                    "Value": 10606,
+                    "Label": "Jewelry accessories"
+                },
+                {
+                    "Value": 10607,
+                    "Label": "Children's clothing and children's shoes"
+                },
+                {
+                    "Value": 10608,
+                    "Label": "Local Leaping"
+                },
+                {
+                    "Value": 10609,
+                    "Label": "Watch"
+                }
+            ],
+            "Value": 10006,
+            "tag": "new",
+            "Label": "clothing bag"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 10701,
+                    "Label": "Low -grade car"
+                },
+                {
+                    "Value": 10702,
+                    "Label": "mid -range car"
+                },
+                {
+                    "Value": 10703,
+                    "Label": "High -end car"
+                },
+                {
+                    "Value": 10704,
+                    "Label": "Used Car"
+                },
+                {
+                    "Value": 10705,
+                    "Label": "Car Rental"
+                },
+                {
+                    "Value": 10706,
+                    "Label": "Vehicle Conservation"
+                }
+            ],
+            "Value": 10007,
+            "tag": "new",
+            "Label": "Car"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 10801,
+                    "Label": "Light weight loss"
+                },
+                {
+                    "Value": 10802,
+                    "Label": "Beauty Plastic Surge"
+                },
+                {
+                    "Value": 10803,
+                    "Label": "Hair Bad"
+                },
+                {
+                    "Value": 10804,
+                    "Label": "Makeup Skin Care"
+                }
+            ],
+            "Value": 10008,
+            "tag": "new",
+            "Label": "Beauty Makeup"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 10901,
+                    "Label": "Rent"
+                },
+                {
+                    "Value": 10902,
+                    "Label": "Second -hand Room"
+                },
+                {
+                    "Value": 10903,
+                    "Label": "Ordinary House"
+                },
+                {
+                    "Value": 10904,
+                    "Label": "Villa luxury house"
+                },
+                {
+                    "Value": 10905,
+                    "Label": "office building"
+                }
+            ],
+            "Value": 10009,
+            "tag": "new",
+            "Label": "Real Estate"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 11001,
+                    "Label": "Restaurant"
+                },
+                {
+                    "Value": 11002,
+                    "Label": "cooking supplies"
+                },
+                {
+                    "Value": 11003,
+                    "Label": "Snack"
+                },
+                {
+                    "Value": 11004,
+                    "Label": "Fruit and Vegetable"
+                },
+                {
+                    "Value": 11005,
+                    "Label": "Other Fresh"
+                },
+                {
+                    "Value": 11006,
+                    "Label": "Bread Cake"
+                },
+                {
+                    "Value": 11007,
+                    "Label": "Drink"
+                },
+                {
+                    "Value": 11008,
+                    "Label": "Wine"
+                },
+                {
+                    "Value": 11009,
+                    "Label": "Import Food"
+                }
+            ],
+            "Value": 10010,
+            "tag": "new",
+            "Label": "Dining and Food"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 11101,
+                    "Label": "Maternity Products"
+                },
+                {
+                    "Value": 11102,
+                    "Label": "Pregnancy related"
+                },
+                {
+                    "Value": 11103,
+                    "Label": "Baby Products"
+                },
+                {
+                    "Value": 11104,
+                    "Label": "Baby Food"
+                },
+                {
+                    "Value": 11105,
+                    "Label": "Photo takes photos"
+                },
+                {
+                    "Value": 11106,
+                    "Label": "Children's Toys"
+                }
+            ],
+            "Value": 10011,
+            "tag": "new",
+            "Label": "Mother and baby"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 11201,
+                    "Label": "Mobile phone and accessories"
+                },
+                {
+                    "Value": 11202,
+                    "Label": "Around the computer"
+                },
+                {
+                    "Value": 11203,
+                    "Label": "Digital camera"
+                },
+                {
+                    "Value": 11204,
+                    "Label": "Network Equipment"
+                },
+                {
+                    "Value": 11205,
+                    "Label": "Game Machine"
+                },
+                {
+                    "Value": 11206,
+                    "Label": "Office Equipment"
+                }
+            ],
+            "Value": 10012,
+            "tag": "new",
+            "Label": "Technology Digital"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 11301,
+                    "Label": "Ball Movement"
+                },
+                {
+                    "Value": 11302,
+                    "Label": "Leisure Sports"
+                },
+                {
+                    "Value": 11303,
+                    "Label": "Running Rider"
+                },
+                {
+                    "Value": 11304,
+                    "Label": "Water Sports"
+                },
+                {
+                    "Value": 11305,
+                    "Label": "Extreme Movement"
+                },
+                {
+                    "Value": 11306,
+                    "Label": "Outdoor Sports"
+                },
+                {
+                    "Value": 11307,
+                    "Label": "Sports Equipment"
+                }
+            ],
+            "Value": 10013,
+            "tag": "new",
+            "Label": "Sports"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 11401,
+                    "Label": "Beauty Beauty"
+                },
+                {
+                    "Value": 11402,
+                    "Label": "Housekeeping Services"
+                },
+                {
+                    "Value": 11403,
+                    "label": "Photography"
+                },
+                {
+                    "Value": 11404,
+                    "Label": "Pet Products"
+                },
+                {
+                    "Value": 11405,
+                    "Label": "Entertainment Facility"
+                },
+                {
+                    "Value": 11406,
+                    "Label": "Flower Gift"
+                }
+            ],
+            "Value": 10014,
+            "tag": "new",
+            "Label": "Life Service"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 11501,
+                    "Label": "Adult Products"
+                },
+                {
+                    "Value": 11502,
+                    "Label": "Health Products"
+                },
+                {
+                    "Value": 11503,
+                    "Label": "Medical Device"
+                },
+                {
+                    "Value": 11504,
+                    "Label": "Pharmaceutical"
+                },
+                {
+                    "Value": 11505,
+                    "Label": "Medical Diagnosis and Treatment"
+                }
+            ],
+            "Value": 10015,
+            "tag": "new",
+            "Label": "Medical Health"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 11601,
+                    "Label": "Judicial Appraisal"
+                },
+                {
+                    "Value": 11602,
+                    "Label": "Lawyer Service"
+                },
+                {
+                    "Value": 11603,
+                    "Label": "Notaries"
+                }
+            ],
+            "Value": 10016,
+            "tag": "new",
+            "Label": "Legal Services"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 11701,
+                    "Label": "Anime peripheral"
+                },
+                {
+                    "Value": 11702,
+                    "Label": "board game"
+                },
+                {
+                    "Value": 11703,
+                    "Label": "Movie TV"
+                },
+                {
+                    "Value": 11704,
+                    "Label": "Art Exhibition"
+                },
+                {
+                    "Value": 11705,
+                    "Label": "Performance"
+                },
+                {
+                    "Value": 11706,
+                    "Label": "Bar KTV"
+                },
+                {
+                    "Value": 11707,
+                    "Label": "Favorite collection"
+                },
+                {
+                    "Value": 11708,
+                    "Label": "Book Magazine"
+                }
+            ],
+            "Value": 10017,
+            "tag": "new",
+            "Label": "Cultural Entertainment"
+        },
+        {
+            "subtags": [
+                {
+                    "Value": 11801,
+                    "Label": "Office Culture and Education"
+                },
+                {
+                    "Value": 11802,
+                    "Label": "Job Research"
+                },
+                {
+                    "Value": 11803,
+                    "Label": "Immigration Intermediary"
+                },
+                {
+                    "Value": 11804,
+                    "Label": "Mechanical Equipment"
+                },
+                {
+                    "Value": 11805,
+                    "Label": "Agriculture, Forestry, Animal Husbandry and Fishing"
+                },
+                {
+                    "Value": 11806,
+                    "Label": "Chemical Materials"
+                },
+                {
+                    "Value": 11807,
+                    "Label": "Energy -saving and environmental protection"
+                },
+                {
+                    "Value": 11808,
+                    "Label": "Security Security"
+                },
+                {
+                    "Value": 11809,
+                    "Label": "Logistics Delivery"
+                },
+                {
+                    "Value": 11810,
+                    "Label": "Marketing Advertising"
+                },
+                {
+                    "Value": 11811,
+                    "Label": "Exhibition Service"
+                },
+                {
+                    "Value": 11812,
+                    "Label": "China Merchants Join"
+                }
+            ],
+            "Value": 10018,
+            "tag": "new",
+            "Label": "Business Services"
+        }
+    ]
+}
