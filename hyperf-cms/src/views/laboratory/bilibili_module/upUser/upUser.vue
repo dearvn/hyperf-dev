@@ -29,12 +29,12 @@
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Timing status selection">
+        <el-form-item label="Timing status">
           <el-select
             v-model="listQuery.timed_status"
             clearable
             class="input-width"
-            placeholder="Timing status selection："
+            placeholder="Timing status："
           >
             <el-option
               v-for="dict in timedStatusOptions"
@@ -123,7 +123,7 @@
           prop="likes"
           v-if="columns[11].visible"
         ></el-table-column>
-        <el-table-column sortable label="State" width="80" align="center" v-if="columns[12].visible">
+        <el-table-column sortable label="Status" width="80" align="center" v-if="columns[12].visible">
           <template slot-scope="scope">
             <el-switch
               v-model="scope.row.timed_status"

@@ -23,10 +23,10 @@
           placeholder="Please enter the dictionary type"
         ></el-input>
       </el-form-item>
-      <el-form-item label="State：">
+      <el-form-item label="Status：">
         <el-radio-group v-model="dictType.status">
-          <el-radio :label="1">Start up</el-radio>
-          <el-radio :label="0">Stop</el-radio>
+          <el-radio :label="1">Enable</el-radio>
+          <el-radio :label="0">Disable</el-radio>
         </el-radio-group>
       </el-form-item>
       <el-form-item label="Remark">

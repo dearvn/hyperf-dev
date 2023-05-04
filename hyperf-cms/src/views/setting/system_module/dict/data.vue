@@ -31,8 +31,8 @@
             @keyup.enter.native="getList"
           />
         </el-form-item>
-        <el-form-item label="Status selection：">
-          <el-select v-model="listQuery.status" clearable class="input-width" placeholder="Status selection：">
+        <el-form-item label="Status：">
+          <el-select v-model="listQuery.status" clearable class="input-width" placeholder="Status：">
             <el-option value="1" label="Normal"></el-option>
             <el-option value="0" label="Stop"></el-option>
           </el-select>
@@ -58,7 +58,7 @@
           prop="dict_sort"
           v-if="columns[3].visible"
         ></el-table-column>
-        <el-table-column label="state" width="140" align="center" v-if="columns[4].visible">
+        <el-table-column label="Status" width="140" align="center" v-if="columns[4].visible">
           <template slot-scope="scope">{{scope.row.status | status}}</template>
         </el-table-column>
         <el-table-column label="Remark" align="center" prop="remark" v-if="columns[5].visible"></el-table-column>

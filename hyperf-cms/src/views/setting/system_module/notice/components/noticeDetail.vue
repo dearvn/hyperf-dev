@@ -26,7 +26,7 @@
           clearable
           class="input-width"
           size="medium"
-          placeholder="State selection"
+          placeholder="Status"
         >
           <el-option
             v-for="dict in noticeDetailDialogData.statusOptions"

@@ -12,8 +12,8 @@
       excelTitle="System suggestion"
     >
       <template slot="extraForm">
-        <el-form-item label="State selection">
-          <el-select v-model="listQuery.status" clearable class="input-width" placeholder="State selection：">
+        <el-form-item label="Status">
+          <el-select v-model="listQuery.status" clearable class="input-width" placeholder="Status：">
             <el-option
               v-for="dict in statusOptions"
               :key="dict.dict_value"
@@ -54,7 +54,7 @@
         ></el-table-column>
         <el-table-column
           v-if="columns[3].visible"
-          label="State"
+          label="Status"
           align="center"
           prop="status"
           width="140"

@@ -46,13 +46,13 @@
             <el-option v-for="item in options" :key="item.mid" :label="item.name" :value="item.mid"></el-option>
           </el-select>
         </el-form-item>
-        <el-form-item label="State selection">
+        <el-form-item label="Status">
           <el-select
             style="width:150px"
             v-model="listQuery.timed_status"
             clearable
             class="input-width"
-            placeholder="Timing status selection："
+            placeholder="Timing status："
           >
             <el-option
               v-for="dict in timedStatusOptions"

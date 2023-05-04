@@ -7,13 +7,13 @@
     @close="closeDialog()"
   >
     <el-form ref="adviceForm" :model="advice" :rules="adviceRules" label-width="80px">
-      <el-form-item label="State" prop="type">
+      <el-form-item label="Status" prop="type">
         <el-select
           v-model="advice.status"
           clearable
           class="input-width"
           size="medium"
-          placeholder="State selection"
+          placeholder="Status"
         >
           <el-option
             v-for="dict in adviceReplyDialogData.statusOptions"

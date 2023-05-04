@@ -30,8 +30,8 @@
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="State selection">
-          <el-select v-model="listQuery.status" clearable class="input-width" placeholder="State selection：">
+        <el-form-item label="Status">
+          <el-select v-model="listQuery.status" clearable class="input-width" placeholder="Status：">
             <el-option
               v-for="dict in statusOptions"
               :key="dict.dict_value"
@@ -67,7 +67,7 @@
           v-if="columns[4].visible"
         ></el-table-column>
         <el-table-column label="Number of executions" align="center" prop="times" v-if="columns[5].visible"></el-table-column>
-        <el-table-column label="state" align="center" v-if="columns[6].visible">
+        <el-table-column label="Status" align="center" v-if="columns[6].visible">
           <template slot-scope="scope">
             <el-switch
               v-model="scope.row.status"

@@ -29,8 +29,8 @@
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Status selection：">
-          <el-select v-model="listQuery.status" clearable class="input-width" placeholder="Status selection：">
+        <el-form-item label="Status：">
+          <el-select v-model="listQuery.status" clearable class="input-width" placeholder="Status：">
             <el-option
               v-for="dict in statusOptions"
               :key="dict.dict_value"

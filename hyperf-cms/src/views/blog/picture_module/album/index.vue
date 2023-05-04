@@ -22,12 +22,12 @@
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="State selection">
+        <el-form-item label="Status">
           <el-select
             v-model="listQuery.album_status"
             clearable
             class="input-width"
-            placeholder="State selection"
+            placeholder="Status"
           >
             <el-option
               v-for="dict in statusOptions"

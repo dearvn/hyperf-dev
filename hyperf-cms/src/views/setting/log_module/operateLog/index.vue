@@ -28,8 +28,8 @@
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="State selection：">
-          <el-select v-model="listQuery.status" clearable class="input-width" placeholder="State selection：">
+        <el-form-item label="Status：">
+          <el-select v-model="listQuery.status" clearable class="input-width" placeholder="Status：">
             <el-option value="1" label="Success"></el-option>
             <el-option value="0" label="Abnormal"></el-option>
           </el-select>

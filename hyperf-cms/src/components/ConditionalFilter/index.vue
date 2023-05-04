@@ -3,7 +3,7 @@
     <el-card class="filter-container" shadow="never" v-if="showSearch">
       <div>
         <i class="el-icon-search"></i>
-        <span>Screen for search</span>
+        <span>Filter</span>
         <el-button style="float:right" type="primary" @click="handleSearchList()" size="small">Search</el-button>
         <el-button
           style="float:right;margin-right: 15px"

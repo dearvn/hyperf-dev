@@ -67,7 +67,7 @@
           >{{dict.dict_label}}</el-radio>
         </el-radio-group>
       </el-form-item>
-      <el-form-item label="state:">
+      <el-form-item label="Status:">
         <el-radio-group v-model="user.status">
           <el-radio
             v-for="dict in userDetailDialogData.statusOptions"

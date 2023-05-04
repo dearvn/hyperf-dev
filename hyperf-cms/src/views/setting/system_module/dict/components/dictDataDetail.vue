@@ -36,10 +36,10 @@
           size="medium"
         ></el-input-number>
       </el-form-item>
-      <el-form-item label="state：">
+      <el-form-item label="Status：">
         <el-radio-group v-model="dictData.status">
-          <el-radio :label="1">Start up</el-radio>
-          <el-radio :label="0">Stopop</el-radio>
+          <el-radio :label="1">Enable</el-radio>
+          <el-radio :label="0">Disable</el-radio>
         </el-radio-group>
       </el-form-item>
       <el-form-item label="Remark">

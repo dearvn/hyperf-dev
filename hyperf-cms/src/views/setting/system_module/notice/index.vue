@@ -21,8 +21,8 @@
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Status selection">
-          <el-select v-model="listQuery.status" clearable class="input-width" placeholder="Status selection：">
+        <el-form-item label="Status">
+          <el-select v-model="listQuery.status" clearable class="input-width" placeholder="Status：">
             <el-option
               v-for="dict in statusOptions"
               :key="dict.dict_value"
@@ -61,7 +61,7 @@
         <el-table-column label="Public time" width="180" prop="public_time" v-if="columns[4].visible">
           <template slot-scope="scope">{{ parseTime(scope.row.public_time)}}</template>
         </el-table-column>
-        <el-table-column label="Creation at" width="180" prop="created_at" v-if="columns[5].visible"></el-table-column>
+        <el-table-column label="Created at" width="180" prop="created_at" v-if="columns[5].visible"></el-table-column>
         <el-table-column label="Action" align="center" width="300">
           <template slot-scope="scope">
             <el-button
