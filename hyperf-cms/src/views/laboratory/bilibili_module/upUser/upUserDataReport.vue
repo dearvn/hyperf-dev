@@ -13,7 +13,7 @@
       excelTitle="UP main data report"
     >
       <template slot="extraForm">
-        <el-form-item label="UP main ID search：">
+        <el-form-item label="UP main ID:">
           <el-select
             style="width:300px"
             v-model="listQuery.mid"

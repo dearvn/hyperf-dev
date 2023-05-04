@@ -13,7 +13,7 @@
       @handleBatchDelete="handleBatchDelete"
     >
       <template slot="extraForm">
-        <el-form-item label="Input search：">
+        <el-form-item label="Input:">
           <el-input
             v-model="listQuery.description"
             class="input-width"

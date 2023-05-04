@@ -15,7 +15,7 @@
       excelTitle="Video data trend chart"
     >
       <template slot="extraForm">
-        <el-form-item label="Video ID search：">
+        <el-form-item label="Video ID:">
           <el-select
             style="width:300px"
             v-model="listQuery.bvid"

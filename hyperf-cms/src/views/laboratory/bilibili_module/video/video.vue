@@ -13,25 +13,25 @@
       excelTitle="UP main list"
     >
       <template slot="extraForm">
-        <el-form-item label="Video ID search：">
+        <el-form-item label="Video ID:">
           <el-input
             style="width:150px"
             v-model="listQuery.bvid"
             class="input-width"
-            placeholder="Video ID search："
+            placeholder="Video ID:"
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Video title search：">
+        <el-form-item label="Video title:">
           <el-input
             style="width:300px"
             v-model="listQuery.title"
             class="input-width"
-            placeholder="Name search："
+            placeholder="Name:"
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="UP main ID search：">
+        <el-form-item label="UP main ID:">
           <el-select
             style="width:250px"
             v-model="listQuery.mid"

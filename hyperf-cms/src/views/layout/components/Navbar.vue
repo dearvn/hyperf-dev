@@ -17,7 +17,7 @@
           style="height: 60px"
           v-if="simpleMaintainSwitch"
         />
-        <project-link id="project-link" class="right-menu-item" style="height: 60px" />
+        <project-link id="project-link" v-if="false" class="right-menu-item" style="height: 60px" />
         <screenfull id="screenfull" class="right-menu-item hover-effect" style="height: 60px" />
         <layout-setting id="layout-setting" class="right-menu-item" style="height: 60px" />
       </template>

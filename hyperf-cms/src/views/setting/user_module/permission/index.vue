@@ -13,19 +13,19 @@
       excelTitle="Permission list"
     >
       <template slot="extraForm">
-        <el-form-item label="Permission name search：">
+        <el-form-item label="Permission name:">
           <el-input
             v-model="listQuery.display_name"
             class="input-width"
-            placeholder="Account search："
+            placeholder="Account:"
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Permissions logo search：">
+        <el-form-item label="Permissions logo:">
           <el-input
             v-model="listQuery.name"
             class="input-width"
-            placeholder="Permissions logo search："
+            placeholder="Permissions logo:"
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>

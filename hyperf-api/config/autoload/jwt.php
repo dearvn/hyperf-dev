@@ -15,15 +15,15 @@ return [
     *Asymmetric Algorithms: RS256, RS384 & RS512 /ES256, ES384 & ES512 use the following public and private keys.
     */
     'keys' => [
-        'public' => env('JWT_PUBLIC_KEY'), // 公钥，例如：'file:///path/to/public/key'
-        'private' => env('JWT_PRIVATE_KEY'), // 私钥，例如：'file:///path/to/private/key'
+        'public' => env('JWT_PUBLIC_KEY'), // Public key, for example：'file:///path/to/public/key'
+        'private' => env('JWT_PRIVATE_KEY'), // Private key, such as：'file:///path/to/private/key'
     ],
 
-    'ttl' => env('JWT_TTL', 7200), // token过期时间，单位为秒
+    'ttl' => env('JWT_TTL', 7200), // tokenExpired time, the unit is second
 
-    'ttl_cache' => env('JWT_TTL_CACHE', 7200), //token 缓存时间 单位为秒
+    'ttl_cache' => env('JWT_TTL_CACHE', 7200), //token The cache time unit is in seconds
 
-    'alg' => env('JWT_ALG', 'HS256'), // jwt的hearder加密算法
+    'alg' => env('JWT_ALG', 'HS256'), // JWT's Header encryption algorithm
 
     /**
      * Support algorithm

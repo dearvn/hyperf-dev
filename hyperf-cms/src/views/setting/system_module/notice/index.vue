@@ -12,11 +12,11 @@
       excelTitle="Notification management"
     >
       <template slot="extraForm">
-        <el-form-item label="Title search：">
+        <el-form-item label="Title:">
           <el-input
             v-model="listQuery.title"
             class="input-width"
-            placeholder="Title search："
+            placeholder="Title:"
             style="width:400px;"
             @keyup.enter.native="getList"
           ></el-input>

@@ -13,19 +13,19 @@
       excelTitle="UP main list"
     >
       <template slot="extraForm">
-        <el-form-item label="Account search：">
+        <el-form-item label="Account:">
           <el-input
             v-model="listQuery.mid"
             class="input-width"
-            placeholder="Account search："
+            placeholder="Account:"
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Name search：">
+        <el-form-item label="Name:">
           <el-input
             v-model="listQuery.name"
             class="input-width"
-            placeholder="Name search："
+            placeholder="Name:"
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
