@@ -101,7 +101,7 @@ class AlbumController extends AbstractController
         $rules = [
             'album_name'  => 'required',
         ];
-        //错误信息
+        //Error message
         $message = [
             'album_name.required' => '[album_name] required',
         ];

@@ -87,12 +87,12 @@ Vue.prototype.copy = function(data, className) {
     }
   });
   clipboard.on("success", e => {
-    this.$message({ message: "复制成功", showClose: true, type: "success" });
+    this.$message({ message: "Replication", showClose: true, type: "success" });
     // free memory
     clipboard.destroy();
   });
   clipboard.on("error", e => {
-    this.$message({ message: "复制失败,", showClose: true, type: "error" });
+    this.$message({ message: "Copy failure,", showClose: true, type: "error" });
     clipboard.destroy();
   });
   this.$forceUpdate();
