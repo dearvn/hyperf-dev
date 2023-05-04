@@ -286,7 +286,7 @@ export default {
      * 导出Excel
      */
     handleExportExcel() {
-      this.$confirm('Do you confirm the export data?', 'hint', {
+      this.$confirm('Do you confirm the export data?', 'Alert', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',

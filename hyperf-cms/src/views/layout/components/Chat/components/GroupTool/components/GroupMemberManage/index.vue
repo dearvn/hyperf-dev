@@ -133,7 +133,7 @@ export default {
       if (row.level == 1)
         confirmMessage = 'Do you want to withdraw the authority of the user administrator and continue?'
       if (row.level == 2) confirmMessage = 'Do you want to set the user as an administrator, do you continue?'
-      this.$confirm(confirmMessage, 'hint', {
+      this.$confirm(confirmMessage, 'Alert', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',

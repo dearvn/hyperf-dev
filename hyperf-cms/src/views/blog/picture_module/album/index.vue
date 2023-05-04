@@ -260,7 +260,7 @@ export default {
       })
     },
     deleteAlbum(id, isBatch = false) {
-      this.$confirm('Do you want to do this delete?', 'hint', {
+      this.$confirm('Do you want to do this delete?', 'Alert', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',

@@ -40,7 +40,7 @@
         </el-form>
       </el-card>
       <el-card shadow="never" style="margin: 20px auto 0;width: 50%;">
-        <div slot="header" class="clearfix" style="font-weight: bold;">operate</div>
+        <div slot="header" class="clearfix" style="font-weight: bold;">Operate</div>
         <el-form ref="buttonForm" label-width="150px">
           <el-form-item label="Cleanings Excel file：">
             <el-button type="danger" plain @click="handleClearExcel()" size="small">Implement</el-button>
@@ -118,7 +118,7 @@ export default {
     confirm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$confirm('Do you want to submit a modification?', 'hint', {
+          this.$confirm('Do you want to submit a modification?', 'Alert', {
             confirmButtonText: 'OK',
             cancelButtonText: 'Cancel',
             type: 'warning',
@@ -153,7 +153,7 @@ export default {
     },
     changeSwitch(name, status) {
       // Switch to switch events
-      this.$confirm('Do you confirm the execution of this operation?', 'hint', {
+      this.$confirm('Do you confirm the execution of this operation?', 'Alert', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
@@ -175,7 +175,7 @@ export default {
     },
     handleClearExcel() {
       // Cleanings Excel file
-      this.$confirm('Do you confirm the cleaning Excel file?', 'hint', {
+      this.$confirm('Do you confirm the cleaning Excel file?', 'Alert', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
@@ -188,7 +188,7 @@ export default {
     },
     handleClearSql() {
       // Clean up SQL file
-      this.$confirm('Do you confirm the cleaning SQL file?', 'hint', {
+      this.$confirm('Do you confirm the cleaning SQL file?', 'Alert', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
@@ -200,7 +200,7 @@ export default {
         .catch((err) => {})
     },
     handleConfigRebulid() {
-      this.$confirm('Do you want to generate configuration?', 'hint', {
+      this.$confirm('Do you want to generate configuration?', 'Alert', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
@@ -212,7 +212,7 @@ export default {
         .catch((err) => {})
     },
     handleBackupLog() {
-      this.$confirm('Do you back up all the logs?', 'hint', {
+      this.$confirm('Do you back up all the logs?', 'Alert', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
@@ -232,7 +232,7 @@ export default {
       })
     },
     handleClearBackupLog() {
-      this.$confirm('Do you confirm the Log Log Backup file?', 'hint', {
+      this.$confirm('Do you confirm the Log Log Backup file?', 'Alert', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
@@ -248,7 +248,7 @@ export default {
         .catch((err) => {})
     },
     handleClearLog() {
-      this.$confirm('Do you confirm the files in the log system?', 'hint', {
+      this.$confirm('Do you confirm the files in the log system?', 'Alert', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',

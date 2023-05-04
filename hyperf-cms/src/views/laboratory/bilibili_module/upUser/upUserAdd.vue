@@ -53,7 +53,7 @@ export default {
     onSubmit(upUserForm) {
       this.$refs[upUserForm].validate((valid) => {
         if (valid) {
-          this.$confirm('Do you want to sumit data?', 'hint', {
+          this.$confirm('Do you want to sumit data?', 'Alert', {
             confirmButtonText: 'OK',
             cancelButtonText: 'Cancel',
             type: 'warning',

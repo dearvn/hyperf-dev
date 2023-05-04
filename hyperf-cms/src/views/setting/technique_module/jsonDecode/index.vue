@@ -10,7 +10,7 @@
     </el-form>
     <div
       style="float: left;padding-right: 12px;width: 100px;text-align: right;font-size: 14px;color: #606266;"
-    >查询结果</div>
+    >Result</div>
     <json-viewer :value="jsonData" :expand-depth="3" copyable boxed style="margin-left: 100px;"></json-viewer>
   </el-card>
 </template>

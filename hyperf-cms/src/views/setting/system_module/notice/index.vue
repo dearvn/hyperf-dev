@@ -199,7 +199,7 @@ export default {
       })
     },
     deleteNotice(id, isBatch = false) {
-      this.$confirm('Do you want to do this delete operation?', 'hint', {
+      this.$confirm('Do you want to do this delete operation?', 'Alert', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',

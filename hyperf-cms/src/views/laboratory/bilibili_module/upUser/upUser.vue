@@ -254,7 +254,7 @@ export default {
       })
     },
     handleSyncVideoReport(mid) {
-      this.$confirm('Do you want to simultaneously synchronize the UP main video?', 'hint', {
+      this.$confirm('Do you want to simultaneously synchronize the UP main video?', 'Alert', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',

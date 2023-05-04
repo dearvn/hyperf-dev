@@ -3,7 +3,7 @@
     <div class="left-board">
       <div class="logo-wrapper">
         <div class="logo">
-          <img :src="logo" alt="logo" /> Form Generator
+          Form Generator
         </div>
       </div>
       <el-scrollbar class="left-scrollbar">
@@ -168,7 +168,7 @@ import {
 import { makeUpJs } from './utils/generator/js'
 import { makeUpCss } from './utils/generator/css'
 import drawingDefalut from './utils/generator/drawingDefalut'
-import logo from '@/assets/bgImage/logo.min.png'
+//import logo from '@/assets/bgImage/logo.min.png'
 import CodeTypeDialog from './CodeTypeDialog'
 import DraggableItem from './DraggableItem'
 
@@ -187,7 +187,7 @@ export default {
   },
   data() {
     return {
-      logo,
+      //logo,
       idGlobal: 100,
       formConf,
       inputComponents,
@@ -300,7 +300,7 @@ export default {
       document.getElementById('copyNode').click()
     },
     empty() {
-      this.$confirm('Are you sure all components should be emptied?', 'hint', { type: 'warning' }).then(
+      this.$confirm('Are you sure all components should be emptied?', 'Alert', { type: 'warning' }).then(
         () => {
           this.drawingList = []
         }

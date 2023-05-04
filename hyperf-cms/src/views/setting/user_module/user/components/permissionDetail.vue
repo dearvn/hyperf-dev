@@ -96,7 +96,7 @@ export default {
       return data.display_name.indexOf(value) !== -1
     },
     handleConfirm() {
-      this.$confirm('Confirm the submission of the user permissions, do you continue?', 'hint', {
+      this.$confirm('Confirm the submission of the user permissions, do you continue?', 'Alert', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',

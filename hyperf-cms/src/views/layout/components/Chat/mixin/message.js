@@ -220,7 +220,7 @@ export default {
         IMUI.removeContact(data.message.toContactId);
         this.$confirm(
           'You have been removed "' + data.message.displayName + '" group chat',
-          "hint",
+          'Alert',
           {
             confirmButtonText: 'OK',
             cancelButtonText: "Cancel",
@@ -232,7 +232,7 @@ export default {
     deleteGroup(data, IMUI) {
       IMUI.removeContact(data.message.toContactId);
       if (this.user.id != data.message.uid) {
-        this.$confirm(data.message.content, "hint", {
+        this.$confirm(data.message.content, 'Alert', {
           confirmButtonText: 'OK',
           cancelButtonText: "Cancel",
           type: "warning"
@@ -376,7 +376,7 @@ export default {
         this.groupTool.groupMemberManageDialogVisible = true;
       if (type == "group_edit") this.groupTool.groupEditDialogVisible = true;
       if (type == "group_exit") {
-        this.$confirm("Confirm that exiting the group, the operation is irreversible, do you continue?", "hint", {
+        this.$confirm("Confirm that exiting the group, the operation is irreversible, do you continue?", 'Alert', {
           confirmButtonText: 'OK',
           cancelButtonText: "Cancel",
           type: "warning"
