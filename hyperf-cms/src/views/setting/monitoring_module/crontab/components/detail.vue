@@ -89,7 +89,7 @@
         >
         <crontab v-if="showCronBox" v-model="timedTask.execute_time"></crontab>
       </el-form-item>
-      <el-form-item label="mission details：" prop="desc">
+      <el-form-item label="Mission details：" prop="desc">
         <el-input
           v-model="timedTask.desc"
           auto-complete="off"
@@ -200,7 +200,7 @@ export default {
     onSubmit(timedTaskForm) {
       this.$refs[timedTaskForm].validate(valid => {
         if (valid) {
-          this.$confirm("Whether to submit data", "hint", {
+          this.$confirm("Do you want to sumit data?", "hint", {
             confirmButtonText: 'OK',
             cancelButtonText: "Cancel",
             type: "warning"

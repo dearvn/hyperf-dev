@@ -52,7 +52,7 @@
         <el-table-column prop="display_name" label="Display name" width="200" v-if="columns[0].visible"></el-table-column>
         <el-table-column
           prop="icon"
-          label="icon"
+          label="Icon"
           align="center"
           width="150"
           v-if="columns[1].visible"
@@ -66,7 +66,7 @@
         <el-table-column prop="component" label="Component pathonent path" v-if="columns[4].visible"></el-table-column>
         <el-table-column
           prop="status"
-          label="状态"
+          label="Status"
           width="80"
           :formatter="statusFormat"
           v-if="columns[5].visible"

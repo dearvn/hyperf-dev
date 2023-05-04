@@ -18,7 +18,7 @@
         <el-table-column label="Action" width="150">
           <template slot-scope="scope">{{scope.row.action}}</template>
         </el-table-column>
-        <el-table-column label="result" width="150" :show-overflow-tooltip="true">
+        <el-table-column label="Result" width="150" :show-overflow-tooltip="true">
           <template slot-scope="scope">{{scope.row.response_result}}</template>
         </el-table-column>
         <el-table-column label="Request parameters" :show-overflow-tooltip="true">

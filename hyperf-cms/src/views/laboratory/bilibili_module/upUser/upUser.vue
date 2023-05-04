@@ -68,14 +68,14 @@
         <el-table-column sortable label="Name" prop="name" align="center" v-if="columns[2].visible"></el-table-column>
         <el-table-column label="Gender" width="100" align="center" prop="sex" v-if="columns[3].visible"></el-table-column>
         <el-table-column
-          label="sign"
+          label="Sign"
           width="240"
           align="center"
           prop="sign"
           v-if="columns[4].visible"
         ></el-table-column>
         <el-table-column
-          label="grade"
+          label="Level"
           width="140"
           align="center"
           prop="level"
@@ -143,7 +143,7 @@
             >Sync video</el-button>
           </template>
         </el-table-column>
-        <el-table-column label="data report" align="center" width="140">
+        <el-table-column label="Data report" align="center" width="140">
           <template slot-scope="scope">
             <el-dropdown size="mini" type="warning" trigger="click" v-if="scope.row.id != 1">
               <el-button icon="el-icon-more" type="primary" size="mini" class="button-color-violet">

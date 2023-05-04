@@ -90,7 +90,7 @@
           prop="bvid"
           v-if="columns[0].visible"
         ></el-table-column>
-        <el-table-column label="cover picture" width="200" align="center" v-if="columns[1].visible">
+        <el-table-column label="Cover picture" width="200" align="center" v-if="columns[1].visible">
           <template slot-scope="scope">
             <image-view
               :image_url="getImages(scope.row.cover)"
@@ -101,7 +101,7 @@
         </el-table-column>
         <el-table-column
           sortable
-          label="title"
+          label="Title"
           width="300"
           prop="title"
           align="center"
@@ -132,7 +132,7 @@
         </el-table-column>
         <el-table-column label="Release time" align="center" prop="public_time" v-if="columns[5].visible"></el-table-column>
         <el-table-column label="Playback time" align="center" prop="duration" v-if="columns[6].visible"></el-table-column>
-        <el-table-column sortable label="状态" width="80" align="center" v-if="columns[7].visible">
+        <el-table-column sortable label="Status" width="80" align="center" v-if="columns[7].visible">
           <template slot-scope="scope">
             <el-switch
               v-model="scope.row.timed_status"

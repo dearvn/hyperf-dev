@@ -30,7 +30,7 @@
             <el-option v-for="item in options" :key="item.mid" :label="item.name" :value="item.mid"></el-option>
           </el-select>
         </el-form-item>
-        <el-form-item label="time limit：">
+        <el-form-item label="Time limit：">
           <el-date-picker
             v-model="listQuery.date"
             :picker-options="pickerOptions"

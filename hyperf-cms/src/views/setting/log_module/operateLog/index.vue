@@ -20,7 +20,7 @@
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="operator">
+        <el-form-item label="Operator">
           <el-input
             v-model="listQuery.operator"
             class="input-width"

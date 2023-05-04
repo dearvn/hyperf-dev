@@ -8,7 +8,7 @@ const components = {
     return [
       <span
         class="drawing-item-copy"
-        title="复制"
+        title="copy"
         onClick={(event) => {
           copyItem(element, parent)
           event.stopPropagation()

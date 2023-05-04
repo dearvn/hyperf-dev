@@ -12,20 +12,20 @@
       excelTitle="Parameter settings"
     >
       <template slot="extraForm">
-        <el-form-item label="Name search：">
+        <el-form-item label="Name：">
           <el-input
             v-model="listQuery.name"
             class="input-width"
-            placeholder="Name search："
+            placeholder="Name："
             style="width:300px;"
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Keyname search：">
+        <el-form-item label="Keyname：">
           <el-input
             v-model="listQuery.name"
             class="input-width"
-            placeholder="Keyname search："
+            placeholder="Keyname："
             style="width:300px;"
             @keyup.enter.native="getList"
           ></el-input>

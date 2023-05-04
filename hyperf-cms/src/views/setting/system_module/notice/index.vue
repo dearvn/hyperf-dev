@@ -43,7 +43,7 @@
       >
         <el-table-column type="selection" width="55"></el-table-column>
         <el-table-column label="ID" align="center" width="120" prop="id" v-if="columns[0].visible"></el-table-column>
-        <el-table-column label="标题" prop="title" v-if="columns[1].visible"></el-table-column>
+        <el-table-column label="Title" prop="title" v-if="columns[1].visible"></el-table-column>
         <el-table-column
           label="Desc"
           width="140"

@@ -19,8 +19,8 @@
         <div style="margin-bottom:20px">
           <span style="margin-left:20px; font-size:14px">Theme choice：</span>
           <el-radio-group v-model="settingDialogData.theme" size="medium">
-            <el-radio-button label="default"></el-radio-button>
-            <el-radio-button label="blue"></el-radio-button>
+            <el-radio-button label="Default"></el-radio-button>
+            <el-radio-button label="Blue"></el-radio-button>
           </el-radio-group>
         </div>
         <div style="margin-bottom:20px">
@@ -36,7 +36,7 @@
           <el-switch v-model="settingDialogData.hideMessageTime" active-text="Whether to hide the message delivery time in the chat window"></el-switch>
         </div>
       </el-tab-pane>
-      <el-tab-pane label="message notification">
+      <el-tab-pane label="Message notification">
         <div style="margin-bottom:20px">
           <span style="margin-left:30px; font-size:14px"></span>
           <el-switch v-model="settingDialogData.friendOnlineNotice" active-text="Open the user online notice"></el-switch>

@@ -64,8 +64,8 @@
           </el-form-item>
           <el-form-item v-if="activeData.layout==='rowFormItem'" label="Layout mode">
             <el-radio-group v-model="activeData.type">
-              <el-radio-button label="default" />
-              <el-radio-button label="flex" />
+              <el-radio-button label="Default" />
+              <el-radio-button label="Flex" />
             </el-radio-group>
           </el-form-item>
           <el-form-item
@@ -221,13 +221,13 @@
               :style="{ width: '100%' }"
               clearable
             >
-              <el-option label="picture" value="image/*" />
-              <el-option label="video" value="video/*" />
-              <el-option label="audio" value="audio/*" />
-              <el-option label="excel" value=".xls,.xlsx" />
-              <el-option label="word" value=".doc,.docx" />
-              <el-option label="pdf" value=".pdf" />
-              <el-option label="txt" value=".txt" />
+              <el-option label="Picture" value="image/*" />
+              <el-option label="Video" value="video/*" />
+              <el-option label="Audio" value="audio/*" />
+              <el-option label="Excel" value=".xls,.xlsx" />
+              <el-option label="Word" value=".doc,.docx" />
+              <el-option label="Pdf" value=".pdf" />
+              <el-option label="Txt" value=".txt" />
             </el-select>
           </el-form-item>
           <el-form-item v-if="activeData.fileSize !== undefined" label="File size">

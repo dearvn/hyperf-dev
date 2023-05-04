@@ -182,7 +182,7 @@ export default {
     onSubmit(userForm) {
       this.$refs[userForm].validate((valid) => {
         if (valid) {
-          this.$confirm('Whether to submit data', 'hint', {
+          this.$confirm('Do you want to sumit data?', 'hint', {
             confirmButtonText: 'OK',
             cancelButtonText: 'Cancel',
             type: 'warning',

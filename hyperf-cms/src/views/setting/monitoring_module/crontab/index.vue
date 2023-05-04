@@ -12,20 +12,20 @@
       excelTitle="Timing task"
     >
       <template slot="extraForm">
-        <el-form-item label="Task name search：">
+        <el-form-item label="Task name：">
           <el-input
             v-model="listQuery.name"
             class="input-width"
-            placeholder="Task name search："
+            placeholder="Task name："
             style="width:300px;"
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="Task name search：">
+        <el-form-item label="Task name：">
           <el-input
             v-model="listQuery.task"
             class="input-width"
-            placeholder="Task name search："
+            placeholder="Task name："
             style="width:300px;"
             @keyup.enter.native="getList"
           ></el-input>
@@ -77,7 +77,7 @@
             ></el-switch>
           </template>
         </el-table-column>
-        <el-table-column label="描述" prop="desc" align="center" v-if="columns[7].visible"></el-table-column>
+        <el-table-column label="Describe" prop="desc" align="center" v-if="columns[7].visible"></el-table-column>
 
         <el-table-column
           label="Created at"

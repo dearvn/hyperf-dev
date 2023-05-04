@@ -67,7 +67,7 @@
     </el-card>
     <!-- Log backup list -->
     <el-dialog
-      title="日志备份列表"
+      title="logBackupList"
       :visible.sync="backupListDialog"
       width="60%"
       :close-on-click-modal="false"
@@ -79,7 +79,7 @@
         style="margin-bottom: 15px;"
       >Clear all files</el-button>
       <el-table ref="backupLogTable" size="mini" :data="backupList" style="width: 100%;" border>
-        <el-table-column label="file name">
+        <el-table-column label="File name">
           <template slot-scope="scope">{{scope.row.name}}</template>
         </el-table-column>
         <el-table-column label="Action" width="160">

@@ -7,10 +7,10 @@
     @close="closeDialog()"
   >
     <el-form :model="notice" :rules="rules" ref="noticeForm" label-width="90px">
-      <el-form-item label="title" prop="title">
+      <el-form-item label="Title" prop="title">
         <el-input v-model="notice.title" auto-complete="off" size="medium" placeholder="Please enter the title"></el-input>
       </el-form-item>
-      <el-form-item label="release time" prop="public_time">
+      <el-form-item label="Public time" prop="public_time">
         <el-date-picker
           v-model="notice.public_time"
           type="datetime"
@@ -108,7 +108,7 @@ export default {
     onSubmit(noticeForm) {
       this.$refs[noticeForm].validate((valid) => {
         if (valid) {
-          this.$confirm('Whether to submit data', 'hint', {
+          this.$confirm('Do you want to sumit data?', 'hint', {
             confirmButtonText: 'OK',
             cancelButtonText: 'Cancel',
             type: 'warning',

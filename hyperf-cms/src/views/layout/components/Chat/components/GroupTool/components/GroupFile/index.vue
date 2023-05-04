@@ -24,7 +24,7 @@
     </div>
     <div>
       <el-table style="width: 100%" size="medium" :data="list" height="500">
-        <el-table-column property="file_name" label="document" width="250" show-overflow-tooltip="true">
+        <el-table-column property="file_name" label="Document" width="250" show-overflow-tooltip="true">
           <template slot-scope="scope">
             <svg-icon
               v-if="['ppt', 'word', 'excel', 'txt', 'md', 'mp4', 'mp3', 'apk', 'exe'].indexOf(scope.row.file_ext) != -1"
@@ -42,10 +42,10 @@
         <el-table-column property="send_time" label="Send time" width="150">
           <template slot-scope="scope">{{ parseTime(scope.row.send_time / 1000)}}</template>
         </el-table-column>
-        <el-table-column property="file_size" label="size" width="80">
+        <el-table-column property="file_size" label="Size" width="80">
           <template slot-scope="scope">{{ getfilesize(scope.row.file_size)}}</template>
         </el-table-column>
-        <el-table-column label="sender" width="120">
+        <el-table-column label="Sender" width="120">
           <template slot-scope="scope">{{ scope.row.get_from_user.desc}}</template>
         </el-table-column>
         <el-table-column property="address" label>

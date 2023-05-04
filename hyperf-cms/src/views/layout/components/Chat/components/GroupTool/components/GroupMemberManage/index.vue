@@ -29,7 +29,7 @@
         <el-table-column property="file_size" label="Group time" width="180">
           <template slot-scope="scope">{{ scope.row.created_at }}</template>
         </el-table-column>
-        <el-table-column align="center" label="identity" width="80">
+        <el-table-column align="center" label="Identity" width="80">
           <template slot-scope="scope">
             <span>
               <span v-if="scope.row.level == 0">

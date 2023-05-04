@@ -1,19 +1,19 @@
 <template lang="html">
   <div class="cron" :val="value_">
     <el-tabs v-model="activeName">
-      <el-tab-pane label="point" name="m">
+      <el-tab-pane label="Point" name="m">
         <second-and-minute v-model="mVal" lable="point"></second-and-minute >
       </el-tab-pane>
-      <el-tab-pane label="hour" name="h">
+      <el-tab-pane label="Hour" name="h">
         <hour v-model="hVal" lable="hour"></hour>
       </el-tab-pane>
       <el-tab-pane label="Day" name="d">
         <day v-model="dVal" lable="Day"></day>
       </el-tab-pane>
-      <el-tab-pane label="moon" name="month">
+      <el-tab-pane label="Month" name="month">
         <month v-model="monthVal" lable="moon"></month>
       </el-tab-pane>
-      <el-tab-pane label="week" name="week">
+      <el-tab-pane label="Week" name="week">
         <week v-model="weekVal" lable="week"></week>
       </el-tab-pane>
     </el-tabs>
@@ -25,12 +25,12 @@
        style="width: 100%;">
        <el-table-column
          prop="mVal"
-         label="point"
+         label="Point"
          width="70">
        </el-table-column>
        <el-table-column
          prop="hVal"
-         label="hour"
+         label="Hour"
          width="70">
        </el-table-column>
        <el-table-column
@@ -40,12 +40,12 @@
        </el-table-column>
        <el-table-column
          prop="monthVal"
-         label="moon"
+         label="Month"
          width="70">
        </el-table-column>
        <el-table-column
          prop="weekVal"
-         label="week"
+         label="Week"
          width="70">
        </el-table-column>
        

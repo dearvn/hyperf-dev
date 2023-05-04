@@ -33,7 +33,7 @@
             ></el-option>
           </el-select>
         </el-form-item>
-        <el-form-item label="time limit：">
+        <el-form-item label="Time limit：">
           <el-date-picker
             v-model="listQuery.date"
             :picker-options="pickerOptions"
@@ -63,7 +63,7 @@
     </conditional-filter>
     <div class="table-container">
       <el-table ref="videoDataReport" :data="list" style="width: 100%;" size="mini" border>
-        <el-table-column label="time" sortable width="150" prop="time" v-if="columns[0].visible"></el-table-column>
+        <el-table-column label="Time" sortable width="150" prop="time" v-if="columns[0].visible"></el-table-column>
         <el-table-column label="Video playback" sortable prop="view" v-if="columns[1].visible">
           <template slot-scope="scope">
             {{scope.row.view}}

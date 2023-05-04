@@ -6,7 +6,7 @@
     :close-on-click-modal="false"
   >
     <el-form :model="album" :rules="rules" ref="albumForm" label-width="150px">
-      <el-form-item label="album name：" prop="album_name">
+      <el-form-item label="Album name：" prop="album_name">
         <el-input
           v-model="album.album_name"
           auto-complete="off"
@@ -15,7 +15,7 @@
           style="width:500px"
         ></el-input>
       </el-form-item>
-      <el-form-item label="album description：" prop="album_desc">
+      <el-form-item label="Album description：" prop="album_desc">
         <el-input
           v-model="album.album_desc"
           auto-complete="off"
@@ -164,7 +164,7 @@ export default {
     onSubmit(albumForm) {
       this.$refs[albumForm].validate((valid) => {
         if (valid) {
-          this.$confirm('Whether to submit data', 'hint', {
+          this.$confirm('Do you want to sumit data?', 'hint', {
             confirmButtonText: 'OK',
             cancelButtonText: 'Cancel',
             type: 'warning',

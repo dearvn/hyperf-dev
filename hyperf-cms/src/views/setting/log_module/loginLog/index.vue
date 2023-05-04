@@ -20,7 +20,7 @@
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
-        <el-form-item label="user name">
+        <el-form-item label="Username">
           <el-input
             v-model="listQuery.username"
             class="input-width"
@@ -30,8 +30,8 @@
         </el-form-item>
         <el-form-item label="Status：">
           <el-select v-model="listQuery.status" clearable class="input-width" placeholder="Status：">
-            <el-option value="1" label="成功"></el-option>
-            <el-option value="0" label="异常"></el-option>
+            <el-option value="1" label="Success"></el-option>
+            <el-option value="0" label="Error"></el-option>
           </el-select>
         </el-form-item>
         <el-form-item label="Time screening：">
@@ -80,7 +80,7 @@
           prop="login_address"
         ></el-table-column>
         <el-table-column v-if="columns[4].visible" label="Browser" align="center" prop="login_browser"></el-table-column>
-        <el-table-column v-if="columns[5].visible" label="operating system" align="center" prop="os"></el-table-column>
+        <el-table-column v-if="columns[5].visible" label="Operating system" align="center" prop="os"></el-table-column>
         <el-table-column
           v-if="columns[6].visible"
           label="Response status code"

@@ -44,7 +44,7 @@
                   class="setting-drawer-block-checbox-selectIcon"
                   style="display: block;"
                 >
-                  <i aria-label="图标: check" class="anticon anticon-check">
+                  <i aria-label="Icon: check" class="anticon anticon-check">
                     <svg
                       viewBox="64 64 896 896"
                       data-icon="check"

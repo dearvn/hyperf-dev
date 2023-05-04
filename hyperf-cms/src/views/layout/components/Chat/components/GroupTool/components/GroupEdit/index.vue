@@ -32,7 +32,7 @@
           v-model="group.introduction"
         ></tinymce>
       </el-form-item>
-      <el-form-item label="群验证：" prop="validation">
+      <el-form-item label="Group verification：" prop="validation">
         <el-radio-group v-model="group.validation">
           <el-radio :label="0">Unnecessary</el-radio>
           <el-radio :label="1">Need</el-radio>

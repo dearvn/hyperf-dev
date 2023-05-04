@@ -7,7 +7,7 @@
     @close="closeDialog()"
   >
     <el-form :model="globalConfig" :rules="rules" ref="globalConfigForm" label-width="90px">
-      <el-form-item label="name" prop="name">
+      <el-form-item label="Name" prop="name">
         <el-input v-model="globalConfig.name" auto-complete="off" size="medium" placeholder="Please fill in the name"></el-input>
       </el-form-item>
       <el-form-item label="Type" prop="type">
@@ -151,7 +151,7 @@ export default {
     onSubmit(globalConfigForm) {
       this.$refs[globalConfigForm].validate((valid) => {
         if (valid) {
-          this.$confirm('Whether to submit data', 'hint', {
+          this.$confirm('Do you want to sumit data?', 'hint', {
             confirmButtonText: 'OK',
             cancelButtonText: 'Cancel',
             type: 'warning',

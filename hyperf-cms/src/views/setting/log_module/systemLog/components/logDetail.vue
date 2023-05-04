@@ -1,16 +1,16 @@
 <template>
   <el-dialog
     class="log-dialog"
-    title="日志内容"
+    title="Log content"
     :visible.sync="logDetailDialogData.logDetailDialogVisible"
     :close-on-click-modal="false"
     width="80%"
   >
     <el-table ref="logContentTable" :data="list" size="normal" border height="650">
-      <el-table-column label="时间" prop="datetime" width="160"></el-table-column>
-      <el-table-column label="环境" prop="env" width="100"></el-table-column>
-      <el-table-column label="错误等级" prop="level" width="100"></el-table-column>
-      <el-table-column label="内容" prop="message"></el-table-column>
+      <el-table-column label="Time" prop="datetime" width="160"></el-table-column>
+      <el-table-column label="Environment" prop="env" width="100"></el-table-column>
+      <el-table-column label="Error level" prop="level" width="100"></el-table-column>
+      <el-table-column label="Content" prop="message"></el-table-column>
     </el-table>
     <div class="pagination-container">
       <Pagination

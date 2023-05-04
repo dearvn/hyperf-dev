@@ -13,11 +13,11 @@
     >
       >
       <template slot="extraForm">
-        <el-form-item label="Album name search：">
+        <el-form-item label="Album name：">
           <el-input
             v-model="listQuery.album_name"
             class="input-width"
-            placeholder="Album name search："
+            placeholder="Album name："
             style="width:300px;"
             @keyup.enter.native="getList"
           ></el-input>
@@ -102,7 +102,7 @@
         ></el-table-column>
         <el-table-column
           v-if="columns[7].visible"
-          label="Album state"
+          label="Album status"
           width="120"
           align="center"
           prop="album_status"
