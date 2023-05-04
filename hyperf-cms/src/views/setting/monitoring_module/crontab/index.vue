@@ -213,7 +213,7 @@ export default {
       this.timedTaskDetailDialogData.timedTaskDetailDialogVisible = true
       this.timedTaskDetailDialogData.statusOptions = this.statusOptions
       this.timedTaskDetailDialogData.timedTaskDetailTitle =
-        'Revise "' + row.title + '" Timing task'
+        'Edit "' + row.title + '" Timing task'
       this.timedTaskDetailDialogData.isEdit = true
       this.timedTaskDetailDialogData.id = row.id
       this.$refs['timedTaskDetail'].getTimedTaskInfo()

@@ -171,7 +171,7 @@ export default {
     handleEdit(row) {
       this.permissionDetailDialogData.permissionDetailDialogVisible = true
       this.permissionDetailDialogData.permissionDetailTitle =
-        'Revise "' + row.display_name + '" Authority'
+        'Edit "' + row.display_name + '" Authority'
       this.permissionDetailDialogData.isEdit = true
       this.permissionDetailDialogData.permissionId = row.id
       this.$refs['permissionDetail'].getPermissionInfo()

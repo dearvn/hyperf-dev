@@ -210,7 +210,7 @@ export default {
       this.adviceDetailDialogData.adviceDetailDialogVisible = true
       this.adviceDetailDialogData.typeOptions = this.typeOptions
       this.adviceDetailDialogData.adviceDetailTitle =
-        'Revise "' + row.title + '" System suggestion'
+        'Edit "' + row.title + '" System suggestion'
       this.adviceDetailDialogData.isEdit = true
       this.adviceDetailDialogData.id = row.id
       this.$refs['adviceDetail'].getAdviceInfo()

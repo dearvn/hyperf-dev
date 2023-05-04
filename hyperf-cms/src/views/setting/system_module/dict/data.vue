@@ -183,7 +183,7 @@ export default {
     handleEdit(index, row) {
       this.dictDataDetailDialogData.dictDataDetailDialogVisible = true
       this.dictDataDetailDialogData.dictDataDetailTitle =
-        'Revise "' + row.dict_label + '" Dictionary data'
+        'Edit "' + row.dict_label + '" Dictionary data'
       this.dictDataDetailDialogData.isEdit = true
       this.dictDataDetailDialogData.dict_code = row.dict_code
       this.$refs['dictDataDetail'].getDictTypeInfo()

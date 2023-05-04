@@ -175,7 +175,7 @@ export default {
       this.noticeDetailDialogData.noticeDetailDialogVisible = true
       this.noticeDetailDialogData.statusOptions = this.statusOptions
       this.noticeDetailDialogData.noticeDetailTitle =
-        'Revise "' + row.title + '" notify'
+        'Edit "' + row.title + '" notify'
       this.noticeDetailDialogData.isEdit = true
       this.noticeDetailDialogData.id = row.id
       this.$refs['noticeDetail'].getNoticeInfo()

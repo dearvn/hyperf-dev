@@ -369,7 +369,7 @@ export default {
       this.userDetailDialogData.userDetailDialogVisible = true
       this.userDetailDialogData.statusOptions = this.statusOptions
       this.userDetailDialogData.sexOptions = this.sexOptions
-      this.userDetailDialogData.userDetailTitle = 'Revise "' + row.desc + '" user'
+      this.userDetailDialogData.userDetailTitle = 'Edit "' + row.desc + '" user'
       this.userDetailDialogData.isEdit = true
       this.userDetailDialogData.userId = row.id
       this.$refs['userDetail'].getUserInfo()

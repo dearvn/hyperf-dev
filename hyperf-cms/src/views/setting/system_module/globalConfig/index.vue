@@ -189,7 +189,7 @@ export default {
       this.globalConfigDetailDialogData.globalConfigDetailDialogVisible = true
       this.globalConfigDetailDialogData.typeOptions = this.typeOptions
       this.globalConfigDetailDialogData.globalConfigDetailTitle =
-        'Revise "' + row.name + '" Global configuration'
+        'Edit "' + row.name + '" Global configuration'
       this.globalConfigDetailDialogData.isEdit = true
       this.globalConfigDetailDialogData.id = row.id
       this.$refs['globalConfigDetail'].getGlobalConfigInfo()
