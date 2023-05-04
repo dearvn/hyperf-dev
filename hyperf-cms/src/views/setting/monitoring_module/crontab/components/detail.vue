@@ -34,7 +34,7 @@
           <tip
             content="The left is a field, and the corresponding value on the right"
             placement="left"
-          />&nbsp;参数：
+          />&nbsp;Parameter：
         </div>
         <div
           class="dataItem"
@@ -52,7 +52,7 @@
             placeholder="Please fill in the parameter"
           ></el-input>
           <el-button type="text" @click="handleDeleteParamsItem(index)"
-            >delete</el-button
+            >Delete</el-button
           >
         </div>
         <el-button @click="handleAddParamsItem()" size="small">Add to</el-button>
@@ -85,7 +85,7 @@
       <el-form-item style="margin-top: -10px; margin-bottom:0px;">
         <span style="color: #E6A23C; font-size: 12px;"
           >CORN from left to right (separated with spaces): Date in the month of the month in seconds in seconds
-          年份</span
+          years</span
         >
         <crontab v-if="showCronBox" v-model="timedTask.execute_time"></crontab>
       </el-form-item>
@@ -111,12 +111,12 @@
     </el-form>
     <div slot="footer" class="dialog-footer">
       <el-button type="primary" @click="onSubmit('timedTaskForm')"
-        >提交</el-button
+        >Submit</el-button
       >
       <el-button
         v-if="!timedTaskDetailDialogData.isEdit"
         @click="resetForm('timedTaskForm')"
-        >重置</el-button
+        >Reset</el-button
       >
     </div>
   </el-dialog>

@@ -100,13 +100,13 @@
               type="primary"
               size="mini"
               @click="handleEdit(scope.row)"
-            >edit</el-button>
+            >Edit</el-button>
             <el-button
               icon="el-icon-delete"
               type="danger"
               size="mini"
               @click="handleDelete(scope.row)"
-            >delete</el-button>
+            >Delete</el-button>
           </template>
         </el-table-column>
       </el-table>

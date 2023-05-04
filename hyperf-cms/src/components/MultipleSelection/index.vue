@@ -44,7 +44,7 @@
         type="primary"
         style="margin: 10px 10px 0 0;float: right;"
         @click="handleConfirm"
-      >confirm</el-button>
+      >Confirm</el-button>
     </div>
   </el-dialog>
 </template>

@@ -12,7 +12,7 @@
               :value="item.dict_value"
             ></el-option>
           </el-select>
-          <el-button type="text" @click="handleDeleteDataItem(index)">delete</el-button>
+          <el-button type="text" @click="handleDeleteDataItem(index)">Delete</el-button>
         </div>
         <el-button @click="handleAddDataItem()" size="small">Add to</el-button>
       </el-form-item>
