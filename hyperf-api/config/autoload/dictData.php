@@ -187,7 +187,7 @@ return [
         [
             "dict_code"  => "4",
             "dict_sort"  => "1",
-            "dict_label" => "start up",
+            "dict_label" => "Enable",
             "dict_value" => "1",
             "dict_type"  => "sys_user_status",
             "css_class"  => "",
