@@ -255,7 +255,7 @@ export default {
     },
     handleSyncVideoReport(mid) {
       this.$confirm('Do you want to simultaneously synchronize the UP main video?', 'hint', {
-        confirmButtonText: 'Sure',
+        confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
       }).then(() => {
@@ -265,7 +265,7 @@ export default {
     handleStatusChange(row) {
       let text = row.status === 0 ? 'Stop' : 'Open up'
       this.$confirm('Confirmation "' + text + '""' + row.desc + '"Users?', 'warn', {
-        confirmButtonText: 'Sure',
+        confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
       })

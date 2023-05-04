@@ -6,18 +6,18 @@
     :close-on-click-modal="false"
   >
     <el-form :model="user" :rules="rules" ref="userForm" label-width="150px">
-      <el-form-item label="user account:" prop="username">
+      <el-form-item label="Username:" prop="username">
         <el-input
           v-model="user.username"
           :disabled="userDetailDialogData.isEdit"
-          placeholder="Please fill in the user account name (only)"
+          placeholder="Please fill in the username (only)"
         ></el-input>
       </el-form-item>
       <el-form-item label="User's Nickname:">
         <el-input v-model="user.desc" placeholder="Please fill in the user's nickname"></el-input>
       </el-form-item>
-      <el-form-item label="user password:" prop="password" v-show="userDetailDialogData.isEdit == false">
-        <el-input v-model="user.password" type="password" autocomplete="off" placeholder="Please enter the user password"></el-input>
+      <el-form-item label="Password:" prop="password" v-show="userDetailDialogData.isEdit == false">
+        <el-input v-model="user.password" type="password" autocomplete="off" placeholder="Please enter the password"></el-input>
       </el-form-item>
       <el-form-item
         label="Confirm Password:"
@@ -28,16 +28,16 @@
           type="password"
           v-model="user.password_confirmation"
           autocomplete="off"
-          placeholder="Please enter the user password again"
+          placeholder="Please enter the password again"
         ></el-input>
       </el-form-item>
-      <el-form-item label="phone number:" prop="mobile">
+      <el-form-item label="Phone number:" prop="mobile">
         <el-input v-model="user.mobile" placeholder="Please fill in the user's mobile phone number"></el-input>
       </el-form-item>
-      <el-form-item label="Mail:" prop="email">
+      <el-form-item label="Email:" prop="email">
         <el-input v-model="user.email" placeholder="Please fill in the user mailbox address"></el-input>
       </el-form-item>
-      <el-form-item label="User role:" prop="roleData">
+      <el-form-item label="Role:" prop="roleData">
         <el-select
           v-model="user.roleData"
           multiple
@@ -55,10 +55,10 @@
           ></el-option>
         </el-select>
       </el-form-item>
-      <el-form-item label="profile picture:">
+      <el-form-item label="Avatar:">
         <single-upload v-model="user.avatar" savePath="admin_face"></single-upload>
       </el-form-item>
-      <el-form-item label="gender:">
+      <el-form-item label="Gender:">
         <el-radio-group v-model="user.sex">
           <el-radio
             v-for="dict in userDetailDialogData.sexOptions"
@@ -183,7 +183,7 @@ export default {
       this.$refs[userForm].validate((valid) => {
         if (valid) {
           this.$confirm('Whether to submit data', 'hint', {
-            confirmButtonText: 'Sure',
+            confirmButtonText: 'OK',
             cancelButtonText: 'Cancel',
             type: 'warning',
           }).then(() => {

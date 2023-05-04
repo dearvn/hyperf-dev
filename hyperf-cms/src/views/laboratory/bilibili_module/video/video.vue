@@ -250,7 +250,7 @@ export default {
     handleStatusChange(row) {
       let text = row.status === 0 ? 'Disable': 'Enable'
       this.$confirm('Confirmation "' + text + '""' + row.desc + '"Users?', 'Warning', {
-        confirmButtonText: 'Sure',
+        confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
       })

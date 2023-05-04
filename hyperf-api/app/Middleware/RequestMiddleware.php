@@ -56,15 +56,20 @@ class RequestMiddleware implements MiddlewareInterface
     {
         $requireParams = $this->request->all();
         //Record request parameter log record
-        if (config('request_log')) Log::requestLog()->info('Request parameters：' . json_encode($requireParams));
+        if (config('request_log')) {
+            Log::requestLog()->info('Request parameters：' . json_encode($requireParams));
+        }
+
         try {
             $isValidToken = false;
             // According to the specific business judgment logic, it is assuming that the token of the user carried is valid
             $token = $request->getHeaderLine('Authorization') ?? '';
             if (strlen($token) > 0) {
                 $token = JWTUtil::handleToken($token);
-                if ($token !== false && $this->jwt->checkToken($token)) $isValidToken = true;
-
+                if ($token !== false && $this->jwt->checkToken($token)) {
+                    $isValidToken = true;
+                }
+                
                 //If the verification is successful
                 if ($isValidToken) {
                     //In the context of the user information placement correction

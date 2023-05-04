@@ -1,7 +1,7 @@
 {
   "name": "hyperf-cms",
   "version": "v1.3.0",
-  "description": "Hyperf + Vue + Element 开发的后台管理框架",
+  "description": "Hyperf + Vue + Element The background management framework for development",
   "author": "linyiyuan <linyiyuann@gmail.com>",
   "scripts": {
     "dev": "vue-cli-service serve",

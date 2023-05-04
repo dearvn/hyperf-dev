@@ -137,7 +137,7 @@ export default {
       this.$refs[dictDataForm].validate((valid) => {
         if (valid) {
           this.$confirm('Whether to submit data', 'hint', {
-            confirmButtonText: 'Sure',
+            confirmButtonText: 'OK',
             cancelButtonText: 'Cancel',
             type: 'warning',
           }).then(() => {

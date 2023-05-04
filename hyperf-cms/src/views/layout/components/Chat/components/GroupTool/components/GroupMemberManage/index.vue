@@ -118,7 +118,7 @@ export default {
     },
     handleDeleteGroupMember(index, row) {
       this.$confirm('Do you want to talk about the user from the group, whether to continue?', 'Prompt', {
-        confirmButtonText: 'Sure',
+        confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
       })
@@ -134,7 +134,7 @@ export default {
         confirmMessage = 'Do you want to withdraw the authority of the user administrator and continue?'
       if (row.level == 2) confirmMessage = 'Do you want to set the user as an administrator, do you continue?'
       this.$confirm(confirmMessage, 'hint', {
-        confirmButtonText: 'Sure',
+        confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
       })

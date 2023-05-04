@@ -97,7 +97,7 @@ export default {
     },
     handleConfirm() {
       this.$confirm('Confirm the submission of the user permissions, do you continue?', 'hint', {
-        confirmButtonText: 'Sure',
+        confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
       })

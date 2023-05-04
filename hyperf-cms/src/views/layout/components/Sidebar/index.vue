@@ -34,7 +34,6 @@
       >
         <i class="el-icon-s-grid" />
         <br />
-        <span>No side column menu</span>
       </div>
     </el-scrollbar>
   </scroll-bar>

@@ -22,7 +22,7 @@ return [
         ],
         [
             "dict_id"    => "3",
-            "dict_name"  => "Permissions state",
+            "dict_name"  => "Permissions status",
             "dict_type"  => "sys_permission_status",
             "remark"     => "Permanent status list",
             "status"     => "1",
@@ -69,14 +69,14 @@ return [
             "dict_id"    => "8",
             "dict_name"  => "Notification management status",
             "dict_type"  => "sys_notice_status",
-            "remark"     => "The state of notification management",
+            "remark"     => "The status of notification management",
             "status"     => "1",
             "created_at" => "2020-6-10 00:00:00",
             "updated_at" => "2020-6-10 00:00:00"
         ],
         [
             "dict_id"    => "9",
-            "dict_name"  => "Album state",
+            "dict_name"  => "Album status",
             "dict_type"  => "blog_album_status",
             "remark"     => "Starting status of the album",
             "status"     => "1",
@@ -96,7 +96,7 @@ return [
             "dict_id"    => "12",
             "dict_name"  => "Timing task status",
             "dict_type"  => "sys_timed_task_status",
-            "remark"     => "The state of time mission enumeration",
+            "remark"     => "The status of time mission enumeration",
             "status"     => "1",
             "created_at" => "2020-6-10 00:00:00",
             "updated_at" => "2020-6-10 00:00:00"
@@ -145,7 +145,7 @@ return [
         [
             "dict_code"  => "1",
             "dict_sort"  => "1",
-            "dict_label" => "男",
+            "dict_label" => "Male",
             "dict_value" => "0",
             "dict_type"  => "sys_user_sex",
             "css_class"  => "",
@@ -159,7 +159,7 @@ return [
         [
             "dict_code"  => "2",
             "dict_sort"  => "1",
-            "dict_label" => "女",
+            "dict_label" => "Female",
             "dict_value" => "1",
             "dict_type"  => "sys_user_sex",
             "css_class"  => "",
@@ -173,14 +173,14 @@ return [
         [
             "dict_code"  => "3",
             "dict_sort"  => "1",
-            "dict_label" => "unknown",
+            "dict_label" => "Other",
             "dict_value" => "2",
             "dict_type"  => "sys_user_sex",
             "css_class"  => "",
             "list_class" => "",
             "is_default" => "1",
             "status"     => "1",
-            "remark"     => "Unknown gender",
+            "remark"     => "Other gender",
             "created_at" => "2020-6-10 00:00:00",
             "updated_at" => "2020-6-10 00:00:00"
         ],
@@ -215,14 +215,14 @@ return [
         [
             "dict_code"  => "6",
             "dict_sort"  => "1",
-            "dict_label" => "Open up",
+            "dict_label" => "Enable",
             "dict_value" => "1",
             "dict_type"  => "sys_permission_status",
             "css_class"  => "",
             "list_class" => "",
             "is_default" => "1",
             "status"     => "1",
-            "remark"     => "Permissions enable state",
+            "remark"     => "Permissions enable status",
             "created_at" => "2020-6-10 00:00:00",
             "updated_at" => "2020-6-10 00:00:00"
         ],
@@ -243,7 +243,7 @@ return [
         [
             "dict_code"  => "8",
             "dict_sort"  => "1",
-            "dict_label" => "yes",
+            "dict_label" => "Yes",
             "dict_value" => "1",
             "dict_type"  => "sys_permission_hidden",
             "css_class"  => "",
@@ -257,7 +257,7 @@ return [
         [
             "dict_code"  => "9",
             "dict_sort"  => "1",
-            "dict_label" => "no",
+            "dict_label" => "No",
             "dict_value" => "0",
             "dict_type"  => "sys_permission_hidden",
             "css_class"  => "",
@@ -271,7 +271,7 @@ return [
         [
             "dict_code"  => "10",
             "dict_sort"  => "1",
-            "dict_label" => "menu",
+            "dict_label" => "Menu",
             "dict_value" => "1",
             "dict_type"  => "sys_permission_type",
             "css_class"  => "",
@@ -299,7 +299,7 @@ return [
         [
             "dict_code"  => "12",
             "dict_sort"  => "1",
-            "dict_label" => "interface",
+            "dict_label" => "Interface",
             "dict_value" => "3",
             "dict_type"  => "sys_permission_type",
             "css_class"  => "",
@@ -313,7 +313,7 @@ return [
         [
             "dict_code"  => "13",
             "dict_sort"  => "1",
-            "dict_label" => "bug",
+            "dict_label" => "Bug",
             "dict_value" => "0",
             "dict_type"  => "sys_advice_type",
             "css_class"  => "",
@@ -327,7 +327,7 @@ return [
         [
             "dict_code"  => "14",
             "dict_sort"  => "1",
-            "dict_label" => "optimization",
+            "dict_label" => "Optimization",
             "dict_value" => "1",
             "dict_type"  => "sys_advice_type",
             "css_class"  => "",
@@ -341,7 +341,7 @@ return [
         [
             "dict_code"  => "15",
             "dict_sort"  => "1",
-            "dict_label" => "mix",
+            "dict_label" => "Mix",
             "dict_value" => "2",
             "dict_type"  => "sys_advice_type",
             "css_class"  => "",
@@ -355,7 +355,7 @@ return [
         [
             "dict_code"  => "16",
             "dict_sort"  => "1",
-            "dict_label" => "to be solved",
+            "dict_label" => "To be solved",
             "dict_value" => "0",
             "dict_type"  => "sys_advice_status",
             "css_class"  => "",
@@ -369,7 +369,7 @@ return [
         [
             "dict_code"  => "17",
             "dict_sort"  => "1",
-            "dict_label" => "solved",
+            "dict_label" => "Solved",
             "dict_value" => "1",
             "dict_type"  => "sys_advice_status",
             "css_class"  => "",
@@ -383,7 +383,7 @@ return [
         [
             "dict_code"  => "18",
             "dict_sort"  => "1",
-            "dict_label" => "closure",
+            "dict_label" => "Closed",
             "dict_value" => "2",
             "dict_type"  => "sys_advice_status",
             "css_class"  => "",
@@ -404,7 +404,7 @@ return [
             "list_class" => "",
             "is_default" => "1",
             "status"     => "1",
-            "remark"     => "Unpublished state",
+            "remark"     => "Unpublished status",
             "created_at" => "2020-6-10 00:00:00",
             "updated_at" => "2020-6-10 00:00:00"
         ],
@@ -425,7 +425,7 @@ return [
         [
             "dict_code"  => "21",
             "dict_sort"  => "1",
-            "dict_label" => "start up",
+            "dict_label" => "Enable",
             "dict_value" => "1",
             "dict_type"  => "blog_album_status",
             "css_class"  => "",
@@ -481,14 +481,14 @@ return [
         [
             "dict_code"  => "25",
             "dict_sort"  => "1",
-            "dict_label" => "Open up",
+            "dict_label" => "Enable",
             "dict_value" => "1",
             "dict_type"  => "sys_timed_task_status",
             "css_class"  => "",
             "list_class" => "",
             "is_default" => "1",
             "status"     => "1",
-            "remark"     => "Enable state",
+            "remark"     => "Enable status",
             "created_at" => "2020-6-10 00:00:00",
             "updated_at" => "2020-6-10 00:00:00"
         ],
@@ -509,7 +509,7 @@ return [
         [
             "dict_code"  => "27",
             "dict_sort"  => "1",
-            "dict_label" => "yes",
+            "dict_label" => "Yes",
             "dict_value" => "1",
             "dict_type"  => "sys_permission_is_link",
             "css_class"  => "",
@@ -600,14 +600,14 @@ return [
             "list_class" => "",
             "is_default" => "1",
             "status"     => "1",
-            "remark"     => "Open state",
+            "remark"     => "Open status",
             "created_at" => "2021-08-24 15:37:09",
             "updated_at" => "2021-08-24 15:37:09"
         ],
         [
             "dict_code"  => "34",
             "dict_sort"  => "1",
-            "dict_label" => "closure",
+            "dict_label" => "Closed",
             "dict_value" => "0",
             "dict_type"  => "lab_up_user_time_status",
             "css_class"  => "",
@@ -628,14 +628,14 @@ return [
             "list_class" => "",
             "is_default" => "1",
             "status"     => "1",
-            "remark"     => "Open state",
+            "remark"     => "Open status",
             "created_at" => "2021-08-24 15:37:09",
             "updated_at" => "2021-08-24 15:37:09"
         ],
         [
             "dict_code"  => "36",
             "dict_sort"  => "1",
-            "dict_label" => "closure",
+            "dict_label" => "Closed",
             "dict_value" => "0",
             "dict_type"  => "lab_video_time_status",
             "css_class"  => "",

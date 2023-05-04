@@ -73,7 +73,7 @@ export default {
     },
     handleDelete(row) {
       this.$confirm('Confirm the delete ','prompt', {
-        confirmButtonText: 'Sure',
+        confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
       })

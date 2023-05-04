@@ -28,7 +28,7 @@
         </div>
         <el-dropdown-menu class="user-dropdown" slot="dropdown">
           <el-dropdown-item>
-            <span @click="personal" style="display: block">Personal center</span>
+            <span @click="personal" style="display: block">Profile</span>
           </el-dropdown-item>
           <el-dropdown-item divided>
             <span @click="advice" style="display: block">System suggestion</span>
@@ -121,7 +121,7 @@ export default {
     },
     getDownloadUrl() {
       this.$alert(this.$store.getters.downLoadUrl, 'download link', {
-        confirmButtonText: 'Sure',
+        confirmButtonText: 'OK',
       })
     },
     handleCopy(text, event) {

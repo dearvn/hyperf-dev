@@ -216,7 +216,7 @@ export default {
     },
     deleteDictData(id, isBatch = false) {
       this.$confirm('Do you want to do this delete operation?', 'hint', {
-        confirmButtonText: 'Sure',
+        confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
       }).then(() => {

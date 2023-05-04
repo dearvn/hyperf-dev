@@ -1,7 +1,7 @@
 import Vue from "vue";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
-//import locale from "element-ui/lib/locale/lang/en-US"; // lang i18n
+import locale from "element-ui/lib/locale/lang/en"; // lang i18n
 import "./styles/element-variables.scss";
 import VCharts from "v-charts";
 import App from "./App";
@@ -41,7 +41,7 @@ import "video.js/dist/video-js.css";
 import "lemon-imui/dist/index.css";
 import Clipboard from "clipboard";
 
-Vue.use(ElementUI);
+Vue.use(ElementUI, {locale});
 Vue.use(VideoPlayer);
 Vue.use(VCharts);
 Vue.use(LemonIMUI);

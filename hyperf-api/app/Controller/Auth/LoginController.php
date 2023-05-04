@@ -48,10 +48,10 @@ class LoginController extends AbstractController
             'captcha' => 'required',
         ];
         $message = [
-            'username.required' => ' username required',
-            'password.required' => ' password required',
-            'password.min' => ' password at least 6 digits',
-            'password.max' => ' password up to 18 digits',
+            'username.required' => 'Username required',
+            'password.required' => 'Password required',
+            'password.min' => 'Password at least 6 digits',
+            'password.max' => 'Password up to 18 digits',
             'code_key.required' => 'Verification code Key is missing',
             'captcha.required' => 'Verification code required',
         ];

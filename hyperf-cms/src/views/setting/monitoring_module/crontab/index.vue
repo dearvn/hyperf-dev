@@ -241,7 +241,7 @@ export default {
     },
     deleteTimedTask(id, isBatch = false) {
       this.$confirm('Do you want to do this delete?', 'hint', {
-        confirmButtonText: 'Sure',
+        confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
       }).then(() => {
@@ -268,7 +268,7 @@ export default {
         'Confirm"' + text + '""' + row.name + '"Do you monitor the task?',
         'warn',
         {
-          confirmButtonText: 'Sure',
+          confirmButtonText: 'OK',
           cancelButtonText: 'Cancel',
           type: 'warning',
         }
