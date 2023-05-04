@@ -112,7 +112,7 @@
           align="center"
           width="180"
         ></el-table-column>
-        <el-table-column label="operate" align="center" width="150">
+        <el-table-column label="Action" align="center" width="150">
           <template slot-scope="scope">
             <el-button
               icon="el-icon-view"

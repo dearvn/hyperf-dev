@@ -142,7 +142,7 @@
             ></el-switch>
           </template>
         </el-table-column>
-        <el-table-column label="operate" align="center" width="140">
+        <el-table-column label="Action" align="center" width="140">
           <template slot-scope="scope">
             <el-dropdown size="mini" type="warning" trigger="click" v-if="scope.row.id != 1">
               <el-button icon="el-icon-more" type="primary" size="mini" class="button-color-violet">

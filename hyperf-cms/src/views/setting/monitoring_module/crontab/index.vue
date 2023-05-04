@@ -80,13 +80,13 @@
         <el-table-column label="描述" prop="desc" align="center" v-if="columns[7].visible"></el-table-column>
 
         <el-table-column
-          label="Creation time"
+          label="Created at"
           width="180"
           prop="created_at"
           align="center"
           v-if="columns[8].visible"
         ></el-table-column>
-        <el-table-column label="operate" align="center" width="300">
+        <el-table-column label="Action" align="center" width="300">
           <template slot-scope="scope">
             <el-button
               icon="el-icon-view"
@@ -172,7 +172,7 @@ export default {
         { key: 5, field: 'times', label: `Number of executions`, visible: true },
         { key: 6, field: 'status', label: `State`, visible: true },
         { key: 7, field: 'desc', label: `Describe`, visible: true },
-        { key: 8, field: 'created_at', label: `Creation time`, visible: true },
+        { key: 8, field: 'created_at', label: `Created at`, visible: true },
       ],
       multipleSelection: [],
       statusOptions: [],

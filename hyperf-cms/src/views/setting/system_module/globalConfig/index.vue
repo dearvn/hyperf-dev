@@ -89,7 +89,7 @@
           prop="created_at"
           v-if="columns[6].visible"
         ></el-table-column>
-        <el-table-column label="Operate" align="center" width="300">
+        <el-table-column label="Action" align="center" width="300">
           <template slot-scope="scope">
             <el-button
               icon="el-icon-edit"

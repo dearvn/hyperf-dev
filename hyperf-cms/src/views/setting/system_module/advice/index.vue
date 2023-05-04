@@ -68,8 +68,8 @@
           width="140"
           :formatter="typeFormat"
         ></el-table-column>
-        <el-table-column v-if="columns[5].visible" label="Creation time" width="180" prop="created_at"></el-table-column>
-        <el-table-column label="Operate" align="center" width="400">
+        <el-table-column v-if="columns[5].visible" label="Created at" width="180" prop="created_at"></el-table-column>
+        <el-table-column label="Action" align="center" width="400">
           <template slot-scope="scope">
             <el-button
               icon="el-icon-view"
@@ -149,7 +149,7 @@ export default {
         { key: 2, field: 'get_user_name.desc', label: `Announcer`, visible: true },
         { key: 3, field: 'status', label: `State`, visible: true },
         { key: 4, field: 'type', label: `Category`, visible: true },
-        { key: 5, field: 'created_at', label: `Creation time`, visible: true },
+        { key: 5, field: 'created_at', label: `Created at`, visible: true },
       ],
       multipleSelection: [],
       statusOptions: [],

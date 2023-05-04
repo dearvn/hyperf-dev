@@ -52,7 +52,7 @@
             </span>
           </template>
         </el-table-column>
-        <el-table-column label="operate">
+        <el-table-column label="Action">
           <template slot-scope="scope">
             <el-button
               v-if="scope.row.uid != groupTool.user.id && scope.row.uid != groupTool.contact.uid"

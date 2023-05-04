@@ -15,7 +15,7 @@
         <el-table-column label="Log path">
           <template slot-scope="scope">{{scope.row.path}}</template>
         </el-table-column>
-        <el-table-column label="operate" width="200">
+        <el-table-column label="Action" width="200">
           <template slot-scope="scope">
             <div v-if="scope.row.type == 'file'">
               <el-button type="primary" size="mini" @click="handleViewDetail(scope.row)">Detail</el-button>

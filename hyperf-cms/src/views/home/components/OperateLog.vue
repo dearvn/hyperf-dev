@@ -15,7 +15,7 @@
         <el-table-column label="Nickname" width="180">
           <template slot-scope="scope">{{scope.row.operator}}</template>
         </el-table-column>
-        <el-table-column label="operate" width="150">
+        <el-table-column label="Action" width="150">
           <template slot-scope="scope">{{scope.row.action}}</template>
         </el-table-column>
         <el-table-column label="result" width="150" :show-overflow-tooltip="true">

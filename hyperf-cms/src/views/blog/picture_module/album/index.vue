@@ -108,10 +108,10 @@
           prop="album_status"
           :formatter="statusFormat"
         ></el-table-column>
-        <el-table-column sortable v-if="columns[8].visible" label="Creation time" align="center">
+        <el-table-column sortable v-if="columns[8].visible" label="Created at" align="center">
           <template slot-scope="scope">{{scope.row.created_at}}</template>
         </el-table-column>
-        <el-table-column label="operate" align="center" width="300">
+        <el-table-column label="Action" align="center" width="300">
           <template slot-scope="scope">
             <el-button
               icon="el-icon-view"

@@ -71,12 +71,12 @@
         <el-table-column
           sortable
           v-if="columns[3].visible"
-          label="Creation time"
+          label="Created at"
           width="180"
           align="center"
           prop="created_at"
         ></el-table-column>
-        <el-table-column label="operate" align="center" width="140">
+        <el-table-column label="Action" align="center" width="140">
           <template slot-scope="scope">
             <el-button
               icon="el-icon-delete"
@@ -135,7 +135,7 @@ export default {
           label: `Album`,
           visible: true,
         },
-        { key: 3, field: 'created_at', label: `Creation time`, visible: true },
+        { key: 3, field: 'created_at', label: `Created at`, visible: true },
       ],
       multipleSelection: [],
       statusOptions: [],

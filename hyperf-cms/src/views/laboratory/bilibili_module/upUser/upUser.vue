@@ -133,7 +133,7 @@
             ></el-switch>
           </template>
         </el-table-column>
-        <el-table-column label="operate" align="center" width="140">
+        <el-table-column label="Action" align="center" width="140">
           <template slot-scope="scope">
             <el-button
               icon="el-icon-download"

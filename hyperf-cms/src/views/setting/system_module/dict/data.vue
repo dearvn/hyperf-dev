@@ -63,13 +63,13 @@
         </el-table-column>
         <el-table-column label="Remark" align="center" prop="remark" v-if="columns[5].visible"></el-table-column>
         <el-table-column
-          label="Creation time"
+          label="Created at"
           width="180"
           prop="created_at"
           align="center"
           v-if="columns[6].visible"
         ></el-table-column>
-        <el-table-column label="operate" align="center" width="250">
+        <el-table-column label="Action" align="center" width="250">
           <template slot-scope="scope">
             <el-button
               icon="el-icon-edit"
@@ -137,7 +137,7 @@ export default {
         { key: 3, field: 'dict_sort', label: `Dictionary`, visible: true },
         { key: 4, field: 'status', label: `State`, visible: true },
         { key: 5, field: 'remark', label: `Remark`, visible: true },
-        { key: 5, field: 'created_at', label: `Creation time`, visible: true },
+        { key: 5, field: 'created_at', label: `Created at`, visible: true },
       ],
       dataTypeList: [],
       multipleSelection: [],
