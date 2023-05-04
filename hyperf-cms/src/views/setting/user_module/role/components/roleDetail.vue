@@ -45,7 +45,7 @@ export default {
       role: Object.assign({}, defaultRole),
       rules: {
         name: [
-          { required: true, message: 'Love input character unique identification', trigger: 'blur' },
+          { required: true, message: 'Please input character unique identification', trigger: 'blur' },
           {
             min: 2,
             max: 60,
@@ -81,7 +81,7 @@ export default {
     onSubmit(roleForm) {
       this.$refs[roleForm].validate((valid) => {
         if (valid) {
-          this.$confirm('Whether to submit the data', 'prompt', {
+          this.$confirm('Do you want to submit the data', 'Warning', {
             confirmButtonText: 'OK',
             cancelButtonText: 'Cancel',
             type: 'warning',

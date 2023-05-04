@@ -190,7 +190,7 @@ export default {
     //Edit role action
     handleEdit(index, row) {
       this.roleDetailDialogData.roleDetailDialogVisible = true
-      this.roleDetailDialogData.roleDetailTitle = 'Edit "' + row.desc + '" user'
+      this.roleDetailDialogData.roleDetailTitle = 'Edit "' + row.name + '" role'
       this.roleDetailDialogData.isEdit = true
       this.roleDetailDialogData.roleId = row.id
       this.$refs['roleDetail'].getRoleInfo()
