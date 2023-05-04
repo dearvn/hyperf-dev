@@ -87,7 +87,7 @@ class InitService extends BaseService
                 'validation' => $val['validation'],
                 'size' => $val['size'],
                 'uid' => $val['uid'],
-                'index' => "[0]群聊",
+                'index' => "[0]group chat",
                 'unread' => $unreadMessageInfo['unread'] ?? 0,
                 'member_total' => 0,
                 'level' => GroupRelation::getLevelById($userInfo['id'], $val['group_id']),

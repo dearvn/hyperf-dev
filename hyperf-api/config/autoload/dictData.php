@@ -537,7 +537,7 @@ return [
         [
             "dict_code"  => "29",
             "dict_sort"  => "1",
-            "dict_label" => "text",
+            "dict_label" => "Text",
             "dict_value" => "text",
             "dict_type"  => "sys_global_config_type",
             "css_class"  => "",

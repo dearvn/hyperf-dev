@@ -247,10 +247,10 @@ export default {
      */
     getList() {
       this.$emit('update:listQuery', this.listQuery) //Synchronously update the list query of the parent component
-      this.$emit('getList') // 触发查询事件
+      this.$emit('getList') // Trigger query event
     },
     /**
-     * 监听回车事件
+     * Monitoring Enter
      */
     enterSearch() {
       document.onkeydown = (e) => {

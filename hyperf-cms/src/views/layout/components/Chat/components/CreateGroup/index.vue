@@ -10,7 +10,7 @@
     destroy-on-close
   >
     <el-steps :active="active" simple>
-      <el-step title="Fill in the information" icon="el-icon-edit"></el-step>
+      <el-step title="Fill in the info" icon="el-icon-edit"></el-step>
       <el-step title="Upload your avatar" icon="el-icon-upload"></el-step>
       <el-step title="Invite member" icon="el-icon-user"></el-step>
     </el-steps>

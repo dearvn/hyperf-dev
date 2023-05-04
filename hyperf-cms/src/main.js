@@ -44,7 +44,7 @@ import Clipboard from "clipboard";
 Vue.use(ElementUI, {locale});
 Vue.use(VideoPlayer);
 Vue.use(VCharts);
-Vue.use(LemonIMUI);
+Vue.use(LemonIMUI, {locale});
 
 Vue.config.productionTip = false;
 Vue.config.devtools = true;

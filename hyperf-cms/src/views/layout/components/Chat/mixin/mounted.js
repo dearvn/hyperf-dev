@@ -103,7 +103,7 @@ export default {
         },
         {
           name: "setting",
-          title: "设置",
+          title: "Set up",
           unread: 0,
           click: () => {
             this.settingDialogData.visible = true;
