@@ -28,7 +28,7 @@
           <el-form-item label="Permissions" prop="type">
             <el-radio-group v-model="permission.type">
               <el-radio :label="1">Table of contents</el-radio>
-              <el-radio :label="2">menu</el-radio>
+              <el-radio :label="2">Menu</el-radio>
               <el-radio :label="3">Button/interface</el-radio>
             </el-radio-group>
           </el-form-item>
