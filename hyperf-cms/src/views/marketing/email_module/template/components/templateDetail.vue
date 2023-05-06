@@ -79,30 +79,24 @@ export default {
     onSubmit(templateForm) {
       this.$refs[templateForm].validate((valid) => {
         if (valid) {
-          this.$confirm('Do you want to submit the data', 'Warning', {
-            confirmButtonText: 'OK',
-            cancelButtonText: 'Cancel',
-            type: 'warning',
-          }).then(() => {
-            if (this.templateDetailDialogData.isEdit) {
-              updateTemplate(this.template.id, this.template).then((response) => {
-                if (response.code == 200) {
-                  this.$refs[templateForm].resetFields()
-                  this.$parent.getList()
-                  this.templateDetailDialogData.templateDetailDialogVisible = false
-                }
-              })
-            } else {
-              createTemplate(this.template).then((response) => {
-                if (response.code == 200) {
-                  this.$refs[templateForm].resetFields()
-                  this.template = Object.assign({}, defaultTemplate)
-                  this.$parent.getList()
-                  this.templateDetailDialogData.templateDetailDialogVisible = false
-                }
-              })
-            }
-          })
+          if (this.templateDetailDialogData.isEdit) {
+            updateTemplate(this.template.id, this.template).then((response) => {
+              if (response.code == 200) {
+                this.$refs[templateForm].resetFields()
+                this.$parent.getList()
+                this.templateDetailDialogData.templateDetailDialogVisible = false
+              }
+            })
+          } else {
+            createTemplate(this.template).then((response) => {
+              if (response.code == 200) {
+                this.$refs[templateForm].resetFields()
+                this.template = Object.assign({}, defaultTemplate)
+                this.$parent.getList()
+                this.templateDetailDialogData.templateDetailDialogVisible = false
+              }
+            })
+          }
         } else {
           this.$message({
             message: 'Verification failed',

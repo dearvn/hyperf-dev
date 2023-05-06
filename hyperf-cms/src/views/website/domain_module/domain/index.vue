@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <conditional-filter
-      excelTitle="Email Template list"
+      excelTitle="Domain list"
       :listQuery.sync="listQuery"
       :defaultListQuery="defaultListQuery"
       :columns.sync="columns"
@@ -13,11 +13,11 @@
       @handleBatchDelete="handleBatchDelete"
     >
       <template slot="extraForm">
-        <el-form-item label="Template Name:">
+        <el-form-item label="Domain Name:">
           <el-input
             v-model="listQuery.description"
             class="input-width"
-            placeholder="Template name"
+            placeholder="Domain name"
             @keyup.enter.native="getList"
           ></el-input>
         </el-form-item>
@@ -41,7 +41,7 @@
           v-if="columns[0].visible"
         ></el-table-column>
         <el-table-column
-          label="Template Name"
+          label="Domain Name"
           prop="name"
           width="180"
           align="center"
@@ -79,12 +79,12 @@
               size="mini"
               @click="handleEdit(scope.$index, scope.row)"
             >Edit</el-button>
-            <el-button
-              icon="el-icon-delete"
-              type="danger"
-              size="mini"
-              @click="handleDelete(scope.row)"
-            >Delete</el-button>
+              <el-button
+                icon="el-icon-delete"
+                type="danger"
+                size="mini"
+                @click="handleDelete(scope.row)"
+              >Delete</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -99,22 +99,22 @@
       ></Pagination>
     </div>
 
-    <template-detail ref="templateDetail" :templateDetailDialogData="templateDetailDialogData"></template-detail>
+    <domain-detail ref="domainDetail" :domainDetailDialogData="domainDetailDialogData"></domain-detail>
   </div>
 </template>
 <script>
-import { getTemplateList, deleteTemplate } from '@/api/marketing/email_module/template'
+import { getDomainList, deleteDomain } from '@/api/website/domain_module/domain'
 import { formatDate } from '@/utils/date'
-import TemplateDetail from './components/templateDetail'
+import DomainDetail from './components/domainDetail'
 
 const defaultListQuery = {
   cur_page: 1,
   page_size: 20,
 }
 export default {
-  name: 'Api:marketing/email_module/template/list-index',
+  name: 'Api:website/domain_module/domain/list-index',
   components: {
-    TemplateDetail,
+    DomainDetail,
   },
   data() {
     return {
@@ -124,16 +124,16 @@ export default {
       multipleSelection: [],
       columns: [
         { key: 0, field: 'id', label: `ID`, visible: true },
-        { key: 1, field: 'name', label: `Template Name`, visible: true },
+        { key: 1, field: 'name', label: `domain Name`, visible: true },
         { key: 2, field: 'description', label: `Desc`, visible: true },
         { key: 3, field: 'created_at', label: `Created at`, visible: true },
         { key: 4, field: 'updated_at', label: `Updated at`, visible: true },
       ],
-      templateDetailDialogData: {
-        templateDetailDialogVisible: false,
-        templateDetailTitle: '',
+      domainDetailDialogData: {
+        domainDetailDialogVisible: false,
+        domainDetailTitle: '',
         isEdit: false,
-        templateId: '',
+        domainId: '',
       },
       
     }
@@ -152,44 +152,44 @@ export default {
     handleSelectionChange(val) {
       this.multipleSelection = val
     },
-    //get template list
+    //get Domain list
     getList() {
-      getTemplateList(this.listQuery).then((response) => {
+      getDomainList(this.listQuery).then((response) => {
         if (response.code == 200) {
           this.list = response.data.list
           this.total = response.data.total
         }
       })
     },
-    //Add template operation
+    //Add Domain operation
     handleAdd() {
-      this.templateDetailDialogData.templateDetailDialogVisible = true
-      this.templateDetailDialogData.templateDetailTitle = 'Add a template'
-      this.templateDetailDialogData.isEdit = false
-      this.$refs['templateDetail'].getTemplateInfo()
+      this.domainDetailDialogData.domainDetailDialogVisible = true
+      this.domainDetailDialogData.domainDetailTitle = 'Add a Domain'
+      this.domainDetailDialogData.isEdit = false
+      this.$refs['domainDetail'].getDomainInfo()
     },
-    //Edit template action
+    //Edit Domain action
     handleEdit(index, row) {
-      this.templateDetailDialogData.templateDetailDialogVisible = true
-      this.templateDetailDialogData.templateDetailTitle = 'Edit "' + row.name + '" template'
-      this.templateDetailDialogData.isEdit = true
-      this.templateDetailDialogData.templateId = row.id
-      this.$refs['templateDetail'].getTemplateInfo()
+      this.domainDetailDialogData.domainDetailDialogVisible = true
+      this.domainDetailDialogData.domainDetailTitle = 'Edit "' + row.name + '" Domain'
+      this.domainDetailDialogData.isEdit = true
+      this.domainDetailDialogData.domainId = row.id
+      this.$refs['domainDetail'].getDomainInfo()
     },
     //Edit user function permissions
-    handleViewTemplate(row) {
-      this.permissionDetailData.templateId = row.id
+    handleViewDomain(row) {
+      this.permissionDetailData.domainId = row.id
       this.$refs['permissionDetail'].init()
       this.permissionDetailData.visible = true
     },
     handleDelete(row) {
-      this.$confirm('Confirm the delete ','prompt', {
+      this.$confirm('Confirm the delete ','Warning', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning',
       })
         .then(() => {
-          deleteTemplate(row.id).then(
+          deleteDomain(row.id).then(
             (response) => {
               if (response.code == 200) {
                 this.getList()

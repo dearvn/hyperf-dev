@@ -266,32 +266,26 @@ export default {
     onSubmit(permissionForm) {
       this.$refs[permissionForm].validate((valid) => {
         if (valid) {
-          this.$confirm('Do you want to sumit data?', 'Alert', {
-            confirmButtonText: 'OK',
-            cancelButtonText: 'Cancel',
-            type: 'warning',
-          }).then(() => {
-            if (this.permissionDetailDialogData.isEdit) {
-              updatePermission(this.permission.id, this.permission).then(
-                (response) => {
-                  if (response.code == 200) {
-                    this.$refs[permissionForm].resetFields()
-                    this.$parent.getList()
-                    this.permissionDetailDialogData.permissionDetailDialogVisible = false
-                  }
-                }
-              )
-            } else {
-              createPermission(this.permission).then((response) => {
+          if (this.permissionDetailDialogData.isEdit) {
+            updatePermission(this.permission.id, this.permission).then(
+              (response) => {
                 if (response.code == 200) {
                   this.$refs[permissionForm].resetFields()
-                  this.permission = Object.assign({}, defaultPermission)
                   this.$parent.getList()
                   this.permissionDetailDialogData.permissionDetailDialogVisible = false
                 }
-              })
-            }
-          })
+              }
+            )
+          } else {
+            createPermission(this.permission).then((response) => {
+              if (response.code == 200) {
+                this.$refs[permissionForm].resetFields()
+                this.permission = Object.assign({}, defaultPermission)
+                this.$parent.getList()
+                this.permissionDetailDialogData.permissionDetailDialogVisible = false
+              }
+            })
+          }
         } else {
           this.$message({
             message: 'Verification failed',

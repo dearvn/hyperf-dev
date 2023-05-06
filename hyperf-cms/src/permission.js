@@ -29,7 +29,7 @@ router.beforeEach((to, from, next) => {
           .dispatch("Initialization")
           .then(res => {
             // Pull user information
-            if (res.code == 200 && store.state.setting.prompt) {
+            /*if (res.code == 200 && store.state.setting.prompt) {
               Notification({
                 title: "Welcome to Hyperf-CMS",
                 message:
@@ -38,7 +38,7 @@ router.beforeEach((to, from, next) => {
                 offset: 100,
                 duration: 5000
               });
-            }
+            }*/
             const data = res.data;
             //Insert the access path field
             data.path = to.path;
