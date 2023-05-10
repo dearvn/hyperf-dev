@@ -166,7 +166,7 @@ export default {
     },
     status(status) {
       if (status == 0) return 'Disable'
-      if (status == 1) return 'Open up'
+      if (status == 1) return 'Enable'
     },
   },
   methods: {

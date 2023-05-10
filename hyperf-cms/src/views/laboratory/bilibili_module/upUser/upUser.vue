@@ -263,7 +263,7 @@ export default {
       })
     },
     handleStatusChange(row) {
-      let text = row.status === 0 ? 'Stop' : 'Open up'
+      let text = row.status === 0 ? 'Deactive' : 'Active'
       this.$confirm('Confirmation "' + text + '""' + row.desc + '"Users?', 'warn', {
         confirmButtonText: 'OK',
         cancelButtonText: 'Cancel',
