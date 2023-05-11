@@ -92,7 +92,7 @@ service.interceptors.response.use(
           "The login status has expired, you can stay on this page, or log in again",
           "Determine",
           {
-            confirmButtonText: "re-register",
+            confirmButtonText: "Login",
             cancelButtonText: "Cancel",
             type: "warning"
           }

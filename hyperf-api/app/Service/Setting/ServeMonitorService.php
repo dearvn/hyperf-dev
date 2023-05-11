@@ -24,7 +24,7 @@ class ServeMonitorService extends BaseService
      */
     public function getCpuInfo() : array
     {
-        // 获取CPU信息
+        // Get CPU information
         $cpuInfo = [];
         if (false === ($str = @file("/proc/cpuinfo"))) return [];
         $str = implode("", $str);
@@ -34,7 +34,7 @@ class ServeMonitorService extends BaseService
         @preg_match_all("/bogomips\s{0,}\:+\s{0,}([\d\.]+)[\r\n]+/", $str, $boGomIps);
         if(false !== is_array($model[1])){
             $cpuInfo['num'] = sizeof($model[1]);
-            $cpuInfo['num_text'] = str_replace(array(1,2,4,8,16),array('单','双','四','八','十六'),$cpuInfo['num']).'核';
+            $cpuInfo['num_text'] = str_replace(array(1,2,4,8,16),array('single', 'dual', 'four', 'eight', 'sixteen'),$cpuInfo['num']).' core';
             for($i = 0; $i < $cpuInfo['num']; $i++){
                 $cpuInfo['model'] = $model[1][$i].'&nbsp;('.$mhz[1][$i].')';
                 $cpuInfo['mhz'] = $mhz[1][$i];
@@ -72,10 +72,10 @@ class ServeMonitorService extends BaseService
         $memoryInfo['mem_used'] = $memoryInfo['mem_total'] - $memoryInfo['mem_free'];
         $memoryInfo['mem_usage'] = round($memoryInfo['mem_used'] / $memoryInfo['mem_total'] * 100, 2);
         $memoryInfo['mem_percent'] = (floatval($memoryInfo['mem_total']) != 0) ? round($memoryInfo['mem_used'] / $memoryInfo['mem_total'] * 100, 2) : 0;
-        $memoryInfo['mem_real_used'] = $memoryInfo['mem_total'] - $memoryInfo['mem_free'] - $memoryInfo['mem_cached'] - $memoryInfo['mem_buffers'];//真实内存使用
-        $memoryInfo['mem_real_free'] = $memoryInfo['mem_total'] - $memoryInfo['mem_real_used'];//真实空闲
-        $memoryInfo['mem_real_percent'] = (floatval($memoryInfo['mem_total']) != 0) ? round($memoryInfo['mem_real_used'] / $memoryInfo['mem_total'] * 100, 2) : 0;//真实内存使用率
-        $memoryInfo['mem_cached_percent'] = (floatval($memoryInfo['mem_cached'])!=0) ? round($memoryInfo['mem_cached'] / $memoryInfo['mem_total'] * 100, 2) : 0;//Cached内存使用率
+        $memoryInfo['mem_real_used'] = $memoryInfo['mem_total'] - $memoryInfo['mem_free'] - $memoryInfo['mem_cached'] - $memoryInfo['mem_buffers'];//Real memory use
+        $memoryInfo['mem_real_free'] = $memoryInfo['mem_total'] - $memoryInfo['mem_real_used'];//True leisure
+        $memoryInfo['mem_real_percent'] = (floatval($memoryInfo['mem_total']) != 0) ? round($memoryInfo['mem_real_used'] / $memoryInfo['mem_total'] * 100, 2) : 0;//Real memory usage rate
+        $memoryInfo['mem_cached_percent'] = (floatval($memoryInfo['mem_cached'])!=0) ? round($memoryInfo['mem_cached'] / $memoryInfo['mem_total'] * 100, 2) : 0;//Cached memory usage rate
         $memoryInfo['swap_total'] = round($buf[4][0] / 1024,2);
         $memoryInfo['swap_free'] = round($buf[5][0] / 1024,2);
         $memoryInfo['swap_used'] = round($memoryInfo['swap_total'] - $memoryInfo['swap_free'],2);
@@ -121,7 +121,7 @@ class ServeMonitorService extends BaseService
         $serveInfo['os'] = PHP_OS;
         $serveInfo['upload_limit'] = get_cfg_var("upload_max_filesize");
         $serveInfo['upload_limit'] = get_cfg_var("upload_max_filesize");
-        $serveInfo['serve_time'] = get_cfg_var("max_execution_time") . "秒";
+        $serveInfo['serve_time'] = get_cfg_var("max_execution_time") . "Second";
         $serveInfo['php_run_type'] = php_sapi_name();
         $serveInfo['architecture'] = 'Hyperf + Vue + Element';
 

@@ -23,7 +23,7 @@
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item>
             <span @click="freshPage()">
-              <i class="el-icon-refresh"></i>refresh page
+              <i class="el-icon-refresh"></i>Refresh page
             </span>
           </el-dropdown-item>
           <el-dropdown-item>

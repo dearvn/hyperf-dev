@@ -8,12 +8,12 @@ use App\Model\Model;
 
 /**
  * Character model class
- * Class EmailTemplate
+ * Class Campaign
  * @package App\Model\Marketing
  * @Author donald
- * @Date: 2023/5/011
+ * @Date: 2023/5/05
  */
-class EmailTemplate extends Model
+class Campaign extends Model
 {
     
     /**
@@ -21,7 +21,7 @@ class EmailTemplate extends Model
      *
      * @var string
      */
-    protected $table = 'email_templates';
+    protected $table = 'marketing_campaigns';
 
     /**
      * The connection name for the model.
