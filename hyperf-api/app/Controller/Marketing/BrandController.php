@@ -65,16 +65,56 @@ class BrandController extends AbstractController
     {
         $postData = $this->request->all();
         $params = [
-            'brand_name' => $postData['brand_name'] ?? '',
-            
-            'description' => $postData['description'] ?? '',
+            'brand_name' => isset($postData['brand_name']) ?? '',
+            'from_name' => isset($postData['from_name']) ?? '',
+            'from_email' => isset($postData['from_email']) ?? '',
+            'reply_to_email' => isset($postData['reply_to_email']) ?? '',
+            'brand_logo' => isset($postData['brand_logo']) ?? '',
+            'smtp_provider' => isset($postData['smtp_provider']) ?? '',
+            'smtp_host' => isset($postData['smtp_host']) ?? '',
+            'smtp_port' => isset($postData['smtp_port']) ?? '',
+            'smtp_ssl' => isset($postData['smtp_ssl']) ?? '',
+            'smtp_username' => isset($postData['smtp_username']) ?? '',
+            'smtp_password' => isset($postData['smtp_password']) ?? '',
+            'custom_domain_protocol' => isset($postData['custom_domain_protocol']) ?? '',
+            'custom_domain' => isset($postData['custom_domain']) ?? '',
+            'enable_custom_domain' => isset($postData['enable_custom_domain']) ?? '',
+            'recaptcha_sitekey' => isset($postData['recaptcha_sitekey']) ?? '',
+            'recaptcha_secret_key' => isset($postData['recaptcha_secret_key']) ?? '',
+            'gdpr_options' => isset($postData['gdpr_options']) ?? '',
+            'opens_tracking' => isset($postData['opens_tracking']) ?? '',
+            'clicks_tracking' => isset($postData['clicks_tracking']) ?? '',
+            'query_string' => isset($postData['query_string']) ?? '',
+            'test_email_prefix' => isset($postData['test_email_prefix']) ?? '',
+            'allowed_attachments' => isset($postData['allowed_attachments']) ?? '',
+            'sort_by' => isset($postData['sort_by']) ?? '',
+            'brand_report_rows' => isset($postData['brand_report_rows']) ?? '',
+            'hide_hidden_lists' => isset($postData['hide_hidden_lists']) ?? '',
+            'login_email' => isset($postData['login_email']) ?? '',
+            'generate_password' => isset($postData['generate_password']) ?? '',
+            'language' => isset($postData['language']) ?? '',
+            'client_privileges' => isset($postData['client_privileges']) ?? '',
+            'notify_campaign_sent' => isset($postData['notify_campaign_sent']) ?? '',
+            'currency' => isset($postData['aaaa']) ?? '',
+            'delivery_fee' => isset($postData['delivery_fee']) ?? '',
+            'cost_per_recipient' => isset($postData['cost_per_recipient']) ?? '',
+            'choose_limit' => isset($postData['choose_limit']) ?? '',
+            'monthly_limit' => isset($postData['monthly_limit']) ?? '',
+            'current_limit' => isset($postData['current_limit']) ?? '',
+            'reset_on_day' => isset($postData['reset_on_day']) ?? '',
         ];
         //Configuration verification
         $rules = [
             'brand_name' => 'required',
+            'from_name' => 'required',
+            'from_email' => 'required',
+            'reply_to_email' => 'required',
         ];
         $message = [
             'brand_name.required' => '[brand_name] required',
+            'from_name.required' => '[from_name] required',
+            'from_email.required' => '[from_email] required',
+            'reply_to_email.required' => '[reply_to_email] required',
         ];
         $this->verifyParams($params, $rules, $message);
 
@@ -115,17 +155,58 @@ class BrandController extends AbstractController
         $postData = $this->request->all();
         $params = [
             'id' => $id,
-            'brand_name' => $postData['brand_name'],
-            'description' => $postData['description']
+            'brand_name' => isset($postData['brand_name']) ?? '',
+            'from_name' => isset($postData['from_name']) ?? '',
+            'from_email' => isset($postData['from_email']) ?? '',
+            'reply_to_email' => isset($postData['reply_to_email']) ?? '',
+            'brand_logo' => isset($postData['brand_logo']) ?? '',
+            'smtp_provider' => isset($postData['smtp_provider']) ?? '',
+            'smtp_host' => isset($postData['smtp_host']) ?? '',
+            'smtp_port' => isset($postData['smtp_port']) ?? '',
+            'smtp_ssl' => isset($postData['smtp_ssl']) ?? '',
+            'smtp_username' => isset($postData['smtp_username']) ?? '',
+            'smtp_password' => isset($postData['smtp_password']) ?? '',
+            'custom_domain_protocol' => isset($postData['custom_domain_protocol']) ?? '',
+            'custom_domain' => isset($postData['custom_domain']) ?? '',
+            'enable_custom_domain' => isset($postData['enable_custom_domain']) ?? '',
+            'recaptcha_sitekey' => isset($postData['recaptcha_sitekey']) ?? '',
+            'recaptcha_secret_key' => isset($postData['recaptcha_secret_key']) ?? '',
+            'gdpr_options' => isset($postData['gdpr_options']) ?? '',
+            'opens_tracking' => isset($postData['opens_tracking']) ?? '',
+            'clicks_tracking' => isset($postData['clicks_tracking']) ?? '',
+            'query_string' => isset($postData['query_string']) ?? '',
+            'test_email_prefix' => isset($postData['test_email_prefix']) ?? '',
+            'allowed_attachments' => isset($postData['allowed_attachments']) ?? '',
+            'sort_by' => isset($postData['sort_by']) ?? '',
+            'brand_report_rows' => isset($postData['brand_report_rows']) ?? '',
+            'hide_hidden_lists' => isset($postData['hide_hidden_lists']) ?? '',
+            'login_email' => isset($postData['login_email']) ?? '',
+            'generate_password' => isset($postData['generate_password']) ?? '',
+            'language' => isset($postData['language']) ?? '',
+            'client_privileges' => isset($postData['client_privileges']) ?? '',
+            'notify_campaign_sent' => isset($postData['notify_campaign_sent']) ?? '',
+            'currency' => isset($postData['aaaa']) ?? '',
+            'delivery_fee' => isset($postData['delivery_fee']) ?? '',
+            'cost_per_recipient' => isset($postData['cost_per_recipient']) ?? '',
+            'choose_limit' => isset($postData['choose_limit']) ?? '',
+            'monthly_limit' => isset($postData['monthly_limit']) ?? '',
+            'current_limit' => isset($postData['current_limit']) ?? '',
+            'reset_on_day' => isset($postData['reset_on_day']) ?? '',
         ];
         //Configuration verification
         $rules = [
             'id' => 'required',
             'brand_name' => 'required',
+            'from_name' => 'required',
+            'from_email' => 'required',
+            'reply_to_email' => 'required',
         ];
         $message = [
             'id.required' => 'Id is invalid',
             'brand_name.required' => '[brand_name] required',
+            'from_name.required' => '[from_name] required',
+            'from_email.required' => '[from_email] required',
+            'reply_to_email.required' => '[reply_to_email] required',
         ];
 
         $this->verifyParams($params, $rules, $message);

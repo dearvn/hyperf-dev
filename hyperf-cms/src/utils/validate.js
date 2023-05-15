@@ -33,6 +33,12 @@ export function validatPhone(str) {
   return reg.test(str)
 }
 
+/* phone number*/
+export function validatEmail(str) {
+  const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return reg.test(str)
+}
+
 /**
  * Determine whether it is empty
  */

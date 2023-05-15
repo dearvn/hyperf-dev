@@ -29,7 +29,7 @@ class CreateBrandTable extends Migration
             $table->string('custom_domain')->nullable();
             $table->boolean('enable_custom_domain')->nullable();
             $table->string('recaptcha_sitekey')->nullable();
-            $table->string('recaptcha_secretkey')->nullable();
+            $table->string('recaptcha_secret_key')->nullable();
             $table->string('gdpr_options')->nullable();
             $table->tinyInteger('opens_tracking')->nullable();
             $table->tinyInteger('clicks_tracking')->nullable();

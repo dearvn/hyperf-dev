@@ -7,7 +7,7 @@
   >
     <el-form :model="campaign" :rules="rules" ref="campaignForm" label-width="150px">
       <el-form-item label="Campaign Name" prop="name">
-        <el-input v-model="campaign.name" plachod auto-complete="off" size="medium"></el-input>
+        <el-input v-model="campaign.name" auto-complete="off" size="medium"></el-input>
       </el-form-item>
       <el-form-item label="Desc" prop="description">
         <el-input v-model="campaign.description" auto-complete="off" size="medium"></el-input>

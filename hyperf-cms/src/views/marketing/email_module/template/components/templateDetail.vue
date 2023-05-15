@@ -7,7 +7,7 @@
   >
     <el-form :model="template" :rules="rules" ref="templateForm" label-width="150px">
       <el-form-item label="Template Name" prop="name">
-        <el-input v-model="template.name" plachod auto-complete="off" size="medium"></el-input>
+        <el-input v-model="template.name" auto-complete="off" size="medium"></el-input>
       </el-form-item>
       <el-form-item label="Desc" prop="description">
         <el-input v-model="template.description" auto-complete="off" size="medium"></el-input>

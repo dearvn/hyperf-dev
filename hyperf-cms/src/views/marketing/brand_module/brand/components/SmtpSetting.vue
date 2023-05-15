@@ -1,84 +1,20 @@
 <template>
-  <el-dialog
-    :title="brandDetailDialogData.brandDetailTitle"
-    :visible.sync="brandDetailDialogData.brandDetailDialogVisible"
-    width="80%"
-    :close-on-click-modal="false"
-  >
-    <el-form :model="brand" :rules="rules" ref="brandForm" label-width="150px">
-      <el-row :gutter="20">
-        <el-col :xs="12" :sm="24" :lg="12">
-          <el-card class="box-card" style="margin-bottom:40px">
-            <div slot="header" class="clearfix">
-              <span>Brand Info</span>
-            </div>
-            <el-form-item label="Brand Name" prop="brand_name">
-              <el-input v-model="brand.brand_name" placeholder="Brand name" auto-complete="off" size="medium"></el-input>
-            </el-form-item>
-            <el-form-item label="From email" prop="from_email">
-              <el-input v-model="brand.from_email" placeholder="name@domain.com" auto-complete="off" size="medium" type="email"></el-input>
-            </el-form-item>
-            <el-form-item label="Reply to email" prop="reply_to_email">
-              <el-input v-model="brand.reply_to_email" placeholder="name@domain.com" auto-complete="off" size="medium" type="email"></el-input>
-            </el-form-item>
-            <el-form-item label="Brand logo:">
-              <single-upload v-model="brand.brand_logo" savePath="admin_face"></single-upload>
-            </el-form-item>
-            <el-collapse v-model="activeName" accordion>
-              <el-collapse-item v-for="item in items" :key="item.id" :title="item.title" :name="item.id">
-                <div>
-                  {{ item.title }}
-                </div>
-              </el-collapse-item>
-            </el-collapse>
-          </el-card>
-        </el-col>
-        <el-col :xs="12" :sm="24" :lg="12">
-          <el-card class="box-card" style="margin-bottom:30px">
-            <div slot="header" class="clearfix">
-              <span>Brand settings</span>
-            </div>
-            <div>
-              <el-row :gutter="20" class="panel-group">
-                <el-form-item label="Login email" prop="login_email">
-                  <el-input v-model="brand.login_email" placeholder="name@domain.com" auto-complete="off" size="medium" type="email"></el-input>
-                </el-form-item>
-              </el-row>
-              <el-row :gutter="20" class="panel-group" style="margin-bottom:-20px">
-                
-              </el-row>
-            </div>
-          </el-card>
-        </el-col>
-      </el-row>
-
-
-      <div class="left-board">
-        
-      </div>
-      <div class="center-board">
-        
-      </div>
-      
-      
-    </el-form>
-    <div slot="footer" class="dialog-footer">
-      <el-button type="primary" @click="onSubmit('brandForm')">Submit</el-button>
-      <el-button @click="resetForm('brandForm')">Reset</el-button>
-    </div>
-  </el-dialog>
+  <div>
+    <el-form-item label="Brand Name" prop="brand_name">
+      <el-input v-model="brand.brand_name" placeholder="Brand name" auto-complete="off" size="medium"></el-input>
+    </el-form-item>
+    <el-form-item label="From email" prop="from_email">
+      <el-input v-model="brand.from_email" placeholder="name@domain.com" auto-complete="off" size="medium" type="email"></el-input>
+    </el-form-item>
+    <el-form-item label="Reply to email" prop="reply_to_email">
+      <el-input v-model="brand.reply_to_email" placeholder="name@domain.com" auto-complete="off" size="medium" type="email"></el-input>
+    </el-form-item>
+  </div>
 </template>
 
 <script>
-import {
-  createBrand,
-  updateBrand,
-  editBrand
-} from '@/api/marketing/brand_module/brand'
-import SingleUpload from '@/components/Upload/singleUpload'
-import { validatEmail } from '@/utils/validate'
 
-const defaultBrand = {
+const defaultSmtp = {
   name: '',
   description: '',
   id: '',

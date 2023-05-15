@@ -42,32 +42,32 @@
         ></el-table-column>
         <el-table-column
           label="Brand Name"
-          prop="name"
+          prop="brand_name"
           width="180"
           align="center"
           v-if="columns[1].visible"
         ></el-table-column>
         <el-table-column
           sortable
-          label="Desc"
-          prop="description"
+          label="Send via"
+          prop="smtp_provider"
           width="180"
           align="center"
           v-if="columns[2].visible"
         ></el-table-column>
         <el-table-column
           sortable
-          label="Created at"
-          width="400"
-          prop="created_at"
+          label="Sending limits"
+          width="100"
+          prop="choose_limit"
           align="center"
           v-if="columns[3].visible"
         ></el-table-column>
         <el-table-column
           sortable
-          label="Updated at"
-          width="400"
-          prop="updated_at"
+          label="Used"
+          width="100"
+          prop="used"
           align="center"
           v-if="columns[4].visible"
         ></el-table-column>
